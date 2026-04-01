@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact Journal - Strategic Career Timeline</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-    
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -24,104 +26,392 @@
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; min-height: 100vh; display: flex; flex-direction: column; }
-        .dark body { background: #020617; color: #f8fafc; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-        ::-webkit-scrollbar { width: 8px; height: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        .dark ::-webkit-scrollbar-thumb { background: #475569; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .dark body {
+            background: #020617;
+            color: #f8fafc;
+        }
 
-        .fmt strong { font-weight: 700; color: #059669; background: rgba(5,150,105,0.08); padding: 0 3px; border-radius: 3px; }
-        .dark .fmt strong { color: #34d399; background: rgba(52,211,153,0.1); }
-        .fmt em { font-style: italic; color: #7c3aed; background: rgba(124,58,237,0.08); padding: 0 3px; border-radius: 3px; }
-        .dark .fmt em { color: #a855f7; background: rgba(168,85,247,0.1); }
-        .fmt h3 { font-weight: 700; margin: 12px 0 6px; font-size: 0.95rem; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; }
-        .dark .fmt h3 { color: #e5e7eb; }
-        .fmt blockquote { border-left: 3px solid #3b82f6; padding-left: 12px; margin: 8px 0; color: #4b5563; font-style: italic; background: rgba(59,130,246,0.05); padding-top: 4px; padding-bottom: 4px; border-radius: 0 4px 4px 0; }
-        .dark .fmt blockquote { border-color: #60a5fa; color: #d1d5db; background: rgba(96,165,250,0.1); }
-        .fmt ul { list-style: none; margin: 8px 0; padding: 0; }
-        .fmt li { position: relative; padding-left: 16px; margin-bottom: 6px; line-height: 1.6; }
-        .fmt li:before { content: "▸"; color: #3b82f6; font-weight: bold; position: absolute; left: 0; top: 1px; }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
 
-        .micro-input { width: 100%; height: 40px; font-size: 13px; padding: 0 12px; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; color: #0f172a; outline: none; transition: all 0.2s; }
-        .dark .micro-input { background: #020617; border-color: #475569; color: #f9fafb; }
-        .micro-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.1); }
-        .micro-textarea { width: 100%; min-height: 80px; font-size: 13px; padding: 12px; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; color: #0f172a; outline: none; resize: vertical; transition: all 0.2s; line-height: 1.6; }
-        .dark .micro-textarea { background: #020617; border-color: #475569; color: #f9fafb; }
-        .micro-textarea:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.1); }
-        .micro-label { display: flex; justify-content: space-between; align-items: flex-end; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 6px; }
-        .dark .micro-label { color: #9ca3af; }
-        
-        .fmt-toolbar { display: flex; gap: 4px; background: #f8fafc; padding: 4px; border-radius: 6px; border: 1px solid #e2e8f0; }
-        .dark .fmt-toolbar { background: #1e293b; border-color: #475569; }
-        .fmt-btn { height: 28px; min-width: 28px; padding: 0 8px; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #e5e7eb; background: #ffffff; color: #6b7280; cursor: pointer; transition: all 0.2s; font-weight: 600; }
-        .fmt-btn:hover { background: #eff6ff; border-color: #bfdbfe; color: #2563eb; transform: translateY(-1px); }
-        .dark .fmt-btn { background: #020617; border-color: #4b5563; color: #e5e7eb; }
-        .dark .fmt-btn:hover { background: #1d4ed8; border-color: #1d4ed8; color: #f9fafb; }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
 
-        .fade-in { animation: fadeIn 0.4s cubic-bezier(0.16,1,0.3,1); }
-        .slide-up { animation: slideUp 0.3s cubic-bezier(0.16,1,0.3,1); }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        .dash-interactive { cursor: pointer; transition: all 0.3s ease; }
-        .dash-interactive:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(0,0,0,0.1); }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
 
-        .chart-container { position: relative; width: 100%; height: 192px; display: flex; align-items: stretch; gap: 8px; }
-        .chart-column { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-width: 0; }
-        .chart-count-label { font-size: 12px; font-weight: 700; line-height: 1; margin-bottom: 6px; transition: color 0.2s; height: 16px; }
-        .chart-bar-area { width: 100%; display: flex; align-items: flex-end; flex: 1; max-width: 40px; }
-        .chart-bar { width: 100%; border-radius: 6px 6px 0 0; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); min-height: 3px; }
-        .chart-month-label { font-size: 11px; font-weight: 600; margin-top: 8px; white-space: nowrap; transition: color 0.2s; }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .fmt strong {
+            font-weight: 700;
+            color: #059669;
+            background: rgba(5, 150, 105, 0.08);
+            padding: 0 3px;
+            border-radius: 3px;
+        }
+
+        .dark .fmt strong {
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+        }
+
+        .fmt em {
+            font-style: italic;
+            color: #7c3aed;
+            background: rgba(124, 58, 237, 0.08);
+            padding: 0 3px;
+            border-radius: 3px;
+        }
+
+        .dark .fmt em {
+            color: #a855f7;
+            background: rgba(168, 85, 247, 0.1);
+        }
+
+        .fmt h3 {
+            font-weight: 700;
+            margin: 12px 0 6px;
+            font-size: 0.95rem;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .dark .fmt h3 {
+            color: #e5e7eb;
+        }
+
+        .fmt blockquote {
+            border-left: 3px solid #3b82f6;
+            padding-left: 12px;
+            margin: 8px 0;
+            color: #4b5563;
+            font-style: italic;
+            background: rgba(59, 130, 246, 0.05);
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .dark .fmt blockquote {
+            border-color: #60a5fa;
+            color: #d1d5db;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .fmt ul {
+            list-style: none;
+            margin: 8px 0;
+            padding: 0;
+        }
+
+        .fmt li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+
+        .fmt li:before {
+            content: "▸";
+            color: #3b82f6;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        .micro-input {
+            width: 100%;
+            height: 40px;
+            font-size: 13px;
+            padding: 0 12px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            color: #0f172a;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .dark .micro-input {
+            background: #020617;
+            border-color: #475569;
+            color: #f9fafb;
+        }
+
+        .micro-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+        }
+
+        .micro-textarea {
+            width: 100%;
+            min-height: 80px;
+            font-size: 13px;
+            padding: 12px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            color: #0f172a;
+            outline: none;
+            resize: vertical;
+            transition: all 0.2s;
+            line-height: 1.6;
+        }
+
+        .dark .micro-textarea {
+            background: #020617;
+            border-color: #475569;
+            color: #f9fafb;
+        }
+
+        .micro-textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+        }
+
+        .micro-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+
+        .dark .micro-label {
+            color: #9ca3af;
+        }
+
+        .fmt-toolbar {
+            display: flex;
+            gap: 4px;
+            background: #f8fafc;
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .dark .fmt-toolbar {
+            background: #1e293b;
+            border-color: #475569;
+        }
+
+        .fmt-btn {
+            height: 28px;
+            min-width: 28px;
+            padding: 0 8px;
+            font-size: 11px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            color: #6b7280;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+
+        .fmt-btn:hover {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+            color: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .dark .fmt-btn {
+            background: #020617;
+            border-color: #4b5563;
+            color: #e5e7eb;
+        }
+
+        .dark .fmt-btn:hover {
+            background: #1d4ed8;
+            border-color: #1d4ed8;
+            color: #f9fafb;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide-up {
+            animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .dash-interactive {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dash-interactive:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 192px;
+            display: flex;
+            align-items: stretch;
+            gap: 8px;
+        }
+
+        .chart-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            min-width: 0;
+        }
+
+        .chart-count-label {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 6px;
+            transition: color 0.2s;
+            height: 16px;
+        }
+
+        .chart-bar-area {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            flex: 1;
+            max-width: 40px;
+        }
+
+        .chart-bar {
+            width: 100%;
+            border-radius: 6px 6px 0 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            min-height: 3px;
+        }
+
+        .chart-month-label {
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 8px;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
     </style>
 </head>
 
 <body>
-    <header class="sticky top-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 md:px-6 py-3 z-30">
+    <header
+        class="sticky top-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 md:px-6 py-3 z-30">
         <div class="max-w-[1800px] mx-auto flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('dashboard')">
-                <div class="bg-gradient-to-br from-primary-500 to-primary-600 text-white p-2 rounded-xl shadow-lg shadow-primary-500/20">
+                <div
+                    class="bg-gradient-to-br from-primary-500 to-primary-600 text-white p-2 rounded-xl shadow-lg shadow-primary-500/20">
                     <i data-lucide="rocket" class="h-5 w-5 md:h-6 md:w-6"></i>
                 </div>
                 <div class="leading-tight">
-                    <h1 class="text-lg md:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Impact Journal</h1>
-                    <div class="text-[9px] md:text-[11px] text-primary-600 dark:text-primary-400 uppercase tracking-wider font-bold">Strategic Career Timeline</div>
+                    <h1 class="text-lg md:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Impact
+                        Journal</h1>
+                    <div
+                        class="text-[9px] md:text-[11px] text-primary-600 dark:text-primary-400 uppercase tracking-wider font-bold">
+                        Strategic Career Timeline</div>
                 </div>
             </div>
-            
+
             <div class="flex items-center gap-2 md:gap-3">
                 <div class="relative group hidden lg:block">
-                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-primary-500 transition-colors"></i>
-                    <input id="search-input" type="search" placeholder="Search achievements..." 
-                           class="h-10 w-56 lg:w-72 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:border-primary-500 rounded-lg pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all">
+                    <i data-lucide="search"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-primary-500 transition-colors"></i>
+                    <input id="search-input" type="search" placeholder="Search achievements..."
+                        class="h-10 w-56 lg:w-72 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:border-primary-500 rounded-lg pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all">
                 </div>
-                
-                <button onclick="exportPerformanceReview()" class="fmt-btn h-9 md:h-10 px-3 rounded-lg flex items-center gap-1.5" title="Export Performance Review">
+
+                <button onclick="exportPerformanceReview()"
+                    class="fmt-btn h-9 md:h-10 px-3 rounded-lg flex items-center gap-1.5"
+                    title="Export Performance Review">
                     <i data-lucide="file-text" class="h-4 w-4"></i>
                     <span class="text-xs font-bold hidden sm:inline">Review</span>
                 </button>
-                
-                <button onclick="document.getElementById('import-input').click()" class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Import JSON">
+
+                <button onclick="document.getElementById('import-input').click()"
+                    class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Import JSON">
                     <i data-lucide="upload" class="h-4 w-4"></i>
                 </button>
                 <input type="file" id="import-input" accept=".json" class="hidden">
-                
+
                 <button id="export-btn" class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Export JSON">
                     <i data-lucide="download" class="h-4 w-4"></i>
                 </button>
-                
+
                 <button id="theme-toggle" class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Toggle Theme">
                     <i data-lucide="sun" class="h-4 w-4 dark:hidden"></i>
                     <i data-lucide="moon" class="h-4 w-4 hidden dark:block"></i>
                 </button>
-                
+
                 <div class="w-px h-6 bg-slate-200 dark:bg-slate-700 mx-1 hidden md:block"></div>
-                
-                <button onclick="openModal()" class="h-9 md:h-10 px-3 md:px-5 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 text-white rounded-lg text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary-600/25 hover:-translate-y-0.5">
+
+                <button onclick="openModal()"
+                    class="h-9 md:h-10 px-3 md:px-5 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 text-white rounded-lg text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary-600/25 hover:-translate-y-0.5">
                     <i data-lucide="plus" class="h-4 w-4"></i>
                     <span class="hidden sm:inline">Log Achievement</span>
                 </button>
@@ -129,7 +419,8 @@
         </div>
     </header>
 
-    <div class="sticky top-[60px] md:top-[65px] bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 z-20">
+    <div
+        class="sticky top-[60px] md:top-[65px] bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 z-20">
         <div class="max-w-[1800px] mx-auto px-4 md:px-6">
             <div class="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar" id="tab-navigation"></div>
         </div>
@@ -140,8 +431,10 @@
         <div id="content-container" class="w-full pb-12"></div>
     </main>
 
-    <div id="toast" class="fixed bottom-6 right-6 transform translate-y-full opacity-0 transition-all duration-300 z-50">
-        <div class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-slate-700 dark:border-slate-200">
+    <div id="toast"
+        class="fixed bottom-6 right-6 transform translate-y-full opacity-0 transition-all duration-300 z-50">
+        <div
+            class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-slate-700 dark:border-slate-200">
             <i data-lucide="check-circle" class="h-5 w-5 text-emerald-400 dark:text-emerald-600"></i>
             <span id="toast-message">Success</span>
         </div>
@@ -149,10 +442,12 @@
 
     <!-- FULL-SCREEN TEXT EDITOR -->
     <div id="fullscreen-editor" class="fixed inset-0 z-[100] hidden bg-white dark:bg-slate-900 flex flex-col slide-up">
-        <div class="h-16 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-4 md:px-8 shrink-0 bg-slate-50 dark:bg-slate-800">
+        <div
+            class="h-16 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-4 md:px-8 shrink-0 bg-slate-50 dark:bg-slate-800">
             <div class="flex items-center gap-4 md:gap-6">
                 <div class="flex items-center gap-3">
-                    <div class="bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 p-2 rounded-lg hidden sm:block">
+                    <div
+                        class="bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 p-2 rounded-lg hidden sm:block">
                         <i data-lucide="maximize" class="h-5 w-5"></i>
                     </div>
                     <div>
@@ -162,26 +457,34 @@
                 <div class="fmt-toolbar hidden sm:flex">
                     <button type="button" onclick="formatFullscreenText('bold')" class="fmt-btn font-bold">B</button>
                     <button type="button" onclick="formatFullscreenText('italic')" class="fmt-btn italic">I</button>
-                    <button type="button" onclick="formatFullscreenText('list')" class="fmt-btn"><i data-lucide="list" class="h-4 w-4"></i></button>
+                    <button type="button" onclick="formatFullscreenText('list')" class="fmt-btn"><i data-lucide="list"
+                            class="h-4 w-4"></i></button>
                     <div class="w-px h-4 bg-slate-300 dark:bg-slate-600 mx-1"></div>
-                    <button type="button" onclick="formatFullscreenText('heading')" class="fmt-btn font-bold">H3</button>
-                    <button type="button" onclick="formatFullscreenText('quote')" class="fmt-btn"><i data-lucide="quote" class="h-3 w-3"></i></button>
+                    <button type="button" onclick="formatFullscreenText('heading')"
+                        class="fmt-btn font-bold">H3</button>
+                    <button type="button" onclick="formatFullscreenText('quote')" class="fmt-btn"><i data-lucide="quote"
+                            class="h-3 w-3"></i></button>
                     <div class="w-px h-4 bg-slate-300 dark:bg-slate-600 mx-1"></div>
-                    <button type="button" onclick="insertTemplate()" class="fmt-btn text-purple-600" title="Insert Template">
+                    <button type="button" onclick="insertTemplate()" class="fmt-btn text-purple-600"
+                        title="Insert Template">
                         <i data-lucide="layout-template" class="h-4 w-4"></i>
                     </button>
                 </div>
             </div>
             <div class="flex items-center gap-2 md:gap-4">
-                <span class="text-xs text-slate-400 hidden lg:block"><kbd class="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded">Ctrl+Enter</kbd> to save</span>
-                <button onclick="closeFullscreenEditor(false)" class="px-3 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">Cancel</button>
-                <button onclick="closeFullscreenEditor(true)" class="px-4 py-2 text-sm font-bold bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg flex items-center gap-2">
+                <span class="text-xs text-slate-400 hidden lg:block"><kbd
+                        class="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded">Ctrl+Enter</kbd> to save</span>
+                <button onclick="closeFullscreenEditor(false)"
+                    class="px-3 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">Cancel</button>
+                <button onclick="closeFullscreenEditor(true)"
+                    class="px-4 py-2 text-sm font-bold bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg flex items-center gap-2">
                     <i data-lucide="check" class="h-4 w-4"></i> Save
                 </button>
             </div>
         </div>
         <div class="flex-1 p-4 md:p-8 overflow-hidden">
-            <textarea id="fs-textarea" class="w-full h-full max-w-4xl mx-auto text-base md:text-lg bg-transparent border-none outline-none text-slate-900 dark:text-white resize-none leading-relaxed font-medium"></textarea>
+            <textarea id="fs-textarea"
+                class="w-full h-full max-w-4xl mx-auto text-base md:text-lg bg-transparent border-none outline-none text-slate-900 dark:text-white resize-none leading-relaxed font-medium"></textarea>
         </div>
     </div>
 
@@ -189,19 +492,27 @@
     <div id="entry-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="absolute inset-0 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-            <div class="bg-white dark:bg-slate-900 w-full max-w-7xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col my-4 sm:my-8 slide-up">
-                
-                <div class="px-4 sm:px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-800 rounded-t-2xl shrink-0">
+            <div
+                class="bg-white dark:bg-slate-900 w-full max-w-7xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col my-4 sm:my-8 slide-up">
+
+                <div
+                    class="px-4 sm:px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-800 rounded-t-2xl shrink-0">
                     <div class="flex items-center gap-3 sm:gap-4">
-                        <div class="bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 p-2 sm:p-3 rounded-xl hidden sm:block">
+                        <div
+                            class="bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 p-2 sm:p-3 rounded-xl hidden sm:block">
                             <i data-lucide="edit-3" class="h-6 w-6"></i>
                         </div>
                         <div>
-                            <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white" id="modal-title">Log Strategic Achievement</h2>
-                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 hidden sm:block">Use <kbd class="px-1 bg-slate-200 dark:bg-slate-700 rounded">Alt+Enter</kbd> in any text box for full-screen editing</p>
+                            <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white" id="modal-title">
+                                Log Strategic Achievement</h2>
+                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 hidden sm:block">Use
+                                <kbd class="px-1 bg-slate-200 dark:bg-slate-700 rounded">Alt+Enter</kbd> in any text box
+                                for full-screen editing
+                            </p>
                         </div>
                     </div>
-                    <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    <button onclick="closeModal()"
+                        class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
                         <i data-lucide="x" class="h-5 w-5 sm:h-6 sm:w-6"></i>
                     </button>
                 </div>
@@ -209,8 +520,9 @@
                 <div class="p-4 sm:p-6 overflow-y-auto flex-1 bg-white dark:bg-slate-900 max-h-[80vh] sm:max-h-[75vh]">
                     <form id="journal-form" class="space-y-6">
                         <input type="hidden" id="entry-id">
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-6 gap-4 bg-slate-50 dark:bg-slate-800/50 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-700">
+
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-6 gap-4 bg-slate-50 dark:bg-slate-800/50 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-700">
                             <div class="md:col-span-1">
                                 <label class="micro-label">Date</label>
                                 <input type="date" id="exact-date" required class="micro-input">
@@ -238,7 +550,9 @@
                             </div>
                             <div class="md:col-span-3">
                                 <label class="micro-label">Headline Result (Outcome-focused)</label>
-                                <input type="text" id="project" placeholder="e.g., Reduced API latency by 40% saving $10k/mo" required class="micro-input font-bold text-sm sm:text-base border-primary-300 focus:ring-primary-500">
+                                <input type="text" id="project"
+                                    placeholder="e.g., Reduced API latency by 40% saving $10k/mo" required
+                                    class="micro-input font-bold text-sm sm:text-base border-primary-300 focus:ring-primary-500">
                             </div>
                         </div>
 
@@ -247,82 +561,130 @@
                                 <div>
                                     <label class="micro-label">
                                         <span class="text-blue-600 dark:text-blue-400">1. Context & Problem</span>
-                                        <button type="button" onclick="openFullscreenEditor('problem','Context & Problem')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('problem','Context & Problem')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="problem" rows="4" placeholder="What was broken or needed? Why was this critical?" class="micro-textarea" ondblclick="openFullscreenEditor('problem','Context & Problem')"></textarea>
+                                    <textarea id="problem" rows="4"
+                                        placeholder="What was broken or needed? Why was this critical?"
+                                        class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('problem','Context & Problem')"></textarea>
                                 </div>
                                 <div>
                                     <label class="micro-label">
                                         <span class="text-indigo-600 dark:text-indigo-400">2. Strategic Alignment</span>
-                                        <button type="button" onclick="openFullscreenEditor('alignment','Strategic Alignment')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('alignment','Strategic Alignment')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="alignment" rows="3" placeholder="Which OKR or company goal did this support?" class="micro-textarea" ondblclick="openFullscreenEditor('alignment','Strategic Alignment')"></textarea>
+                                    <textarea id="alignment" rows="3"
+                                        placeholder="Which OKR or company goal did this support?" class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('alignment','Strategic Alignment')"></textarea>
                                 </div>
                                 <div>
                                     <label class="micro-label"><span>3. Stakeholders & Skills</span></label>
-                                    <input type="text" id="stakeholders" placeholder="Teams involved, people (comma separated)" class="micro-input mb-2">
-                                    <input type="text" id="skills" placeholder="Technologies, methodologies used (comma separated)" class="micro-input">
+                                    <input type="text" id="stakeholders"
+                                        placeholder="Teams involved, people (comma separated)" class="micro-input mb-2">
+                                    <input type="text" id="skills"
+                                        placeholder="Technologies, methodologies used (comma separated)"
+                                        class="micro-input">
                                 </div>
                             </div>
 
                             <div class="space-y-5">
                                 <div>
                                     <label class="micro-label">
-                                        <span class="text-purple-600 dark:text-purple-400">4. Your Specific Actions</span>
-                                        <button type="button" onclick="openFullscreenEditor('contribution','Your Specific Actions')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <span class="text-purple-600 dark:text-purple-400">4. Your Specific
+                                            Actions</span>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('contribution','Your Specific Actions')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="contribution" rows="5" required placeholder="What YOU did specifically (use bullets: • Led... • Designed...)" class="micro-textarea" ondblclick="openFullscreenEditor('contribution','Your Specific Actions')"></textarea>
+                                    <textarea id="contribution" rows="5" required
+                                        placeholder="What YOU did specifically (use bullets: • Led... • Designed...)"
+                                        class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('contribution','Your Specific Actions')"></textarea>
                                 </div>
                                 <div>
                                     <label class="micro-label">
                                         <span class="text-orange-600 dark:text-orange-400">5. Challenges Overcome</span>
-                                        <button type="button" onclick="openFullscreenEditor('challenges','Challenges Overcome')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('challenges','Challenges Overcome')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="challenges" rows="3" placeholder="Obstacles navigated (technical, people, time)" class="micro-textarea" ondblclick="openFullscreenEditor('challenges','Challenges Overcome')"></textarea>
+                                    <textarea id="challenges" rows="3"
+                                        placeholder="Obstacles navigated (technical, people, time)"
+                                        class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('challenges','Challenges Overcome')"></textarea>
                                 </div>
                                 <div>
                                     <label class="micro-label">
                                         <span class="text-red-600 dark:text-red-400">6. Tradeoffs & Risks</span>
-                                        <button type="button" onclick="openFullscreenEditor('tradeoffs','Tradeoffs & Risks')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('tradeoffs','Tradeoffs & Risks')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="tradeoffs" rows="3" placeholder="What did you consciously trade off? (Scope vs Time)" class="micro-textarea" ondblclick="openFullscreenEditor('tradeoffs','Tradeoffs & Risks')"></textarea>
+                                    <textarea id="tradeoffs" rows="3"
+                                        placeholder="What did you consciously trade off? (Scope vs Time)"
+                                        class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('tradeoffs','Tradeoffs & Risks')"></textarea>
                                 </div>
                             </div>
 
                             <div class="space-y-5">
                                 <div>
                                     <label class="micro-label">
-                                        <span class="text-emerald-600 dark:text-emerald-400">7. Quantified Results</span>
-                                        <button type="button" onclick="openFullscreenEditor('goals','Quantified Results')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <span class="text-emerald-600 dark:text-emerald-400">7. Quantified
+                                            Results</span>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('goals','Quantified Results')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="goals" rows="5" required placeholder="Metrics, KPIs, revenue, time saved (use **bold** for numbers)" class="micro-textarea border-emerald-300 bg-emerald-50/30 dark:bg-emerald-900/10" ondblclick="openFullscreenEditor('goals','Quantified Results')"></textarea>
+                                    <textarea id="goals" rows="5" required
+                                        placeholder="Metrics, KPIs, revenue, time saved (use **bold** for numbers)"
+                                        class="micro-textarea border-emerald-300 bg-emerald-50/30 dark:bg-emerald-900/10"
+                                        ondblclick="openFullscreenEditor('goals','Quantified Results')"></textarea>
                                 </div>
                                 <div>
                                     <label class="micro-label">
                                         <span class="text-pink-600 dark:text-pink-400">8. Resume Soundbites</span>
-                                        <button type="button" onclick="openFullscreenEditor('soundbites','Resume Soundbites')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('soundbites','Resume Soundbites')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="soundbites" rows="3" placeholder="1-2 bullet points ready to copy/paste into your resume" class="micro-textarea" ondblclick="openFullscreenEditor('soundbites','Resume Soundbites')"></textarea>
+                                    <textarea id="soundbites" rows="3"
+                                        placeholder="1-2 bullet points ready to copy/paste into your resume"
+                                        class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('soundbites','Resume Soundbites')"></textarea>
                                 </div>
                                 <div>
                                     <label class="micro-label">
                                         <span class="text-teal-600 dark:text-teal-400">9. Lessons & Recognition</span>
-                                        <button type="button" onclick="openFullscreenEditor('evidence','Lessons & Recognition')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                        <button type="button"
+                                            onclick="openFullscreenEditor('evidence','Lessons & Recognition')"
+                                            class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
                                     </label>
-                                    <textarea id="evidence" rows="3" placeholder="What you learned, quotes from managers, awards" class="micro-textarea" ondblclick="openFullscreenEditor('evidence','Lessons & Recognition')"></textarea>
+                                    <textarea id="evidence" rows="3"
+                                        placeholder="What you learned, quotes from managers, awards"
+                                        class="micro-textarea"
+                                        ondblclick="openFullscreenEditor('evidence','Lessons & Recognition')"></textarea>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <div class="px-4 sm:px-6 py-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 rounded-b-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
-                    <button type="button" onclick="fillSampleContent()" class="text-sm font-bold text-slate-500 hover:text-primary-600 flex items-center gap-2 transition-colors w-full sm:w-auto justify-center">
+                <div
+                    class="px-4 sm:px-6 py-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 rounded-b-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
+                    <button type="button" onclick="fillSampleContent()"
+                        class="text-sm font-bold text-slate-500 hover:text-primary-600 flex items-center gap-2 transition-colors w-full sm:w-auto justify-center">
                         <i data-lucide="wand-2" class="h-4 w-4"></i> Sample Content
                     </button>
                     <div class="flex gap-3 w-full sm:w-auto">
-                        <button type="button" onclick="closeModal()" class="flex-1 sm:flex-none px-5 py-2.5 text-sm font-bold text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 text-center">Cancel</button>
-                        <button type="button" onclick="document.getElementById('journal-form').requestSubmit()" class="flex-1 sm:flex-none px-6 py-2.5 text-sm font-bold bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg flex items-center justify-center gap-2">
+                        <button type="button" onclick="closeModal()"
+                            class="flex-1 sm:flex-none px-5 py-2.5 text-sm font-bold text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 text-center">Cancel</button>
+                        <button type="button" onclick="document.getElementById('journal-form').requestSubmit()"
+                            class="flex-1 sm:flex-none px-6 py-2.5 text-sm font-bold bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg flex items-center justify-center gap-2">
                             <i data-lucide="save" class="h-4 w-4"></i> Save
                         </button>
                     </div>
@@ -342,7 +704,7 @@
         let currentEditId = null;
         let activeWeekKey = 'dashboard';
         let currentFsTargetId = null;
-        
+
         // Enhanced multi-filter system with timeRange
         let dashFilters = {
             impact: null,
@@ -363,16 +725,16 @@
         function setupListeners() {
             document.getElementById('journal-form').addEventListener('submit', handleSubmit);
             document.getElementById('search-input').addEventListener('input', (e) => {
-                if(activeWeekKey === 'dashboard' && e.target.value.trim() !== '') {
-                    activeWeekKey = 'search'; 
+                if (activeWeekKey === 'dashboard' && e.target.value.trim() !== '') {
+                    activeWeekKey = 'search';
                 }
                 renderView(e.target.value);
             });
             document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
             document.getElementById('export-btn').addEventListener('click', exportData);
             document.getElementById('import-input').addEventListener('change', handleImport);
-            
-            document.addEventListener('keydown', (e) => { 
+
+            document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     if (!document.getElementById('fullscreen-editor').classList.contains('hidden')) closeFullscreenEditor(false);
                     else if (!document.getElementById('entry-modal').classList.contains('hidden')) closeModal();
@@ -426,7 +788,7 @@
         function getFilteredEntries(excludeType = null) {
             const activeFilters = Object.entries(dashFilters).filter(([key, value]) => value !== null && key !== excludeType);
             if (activeFilters.length === 0) return entries;
-            
+
             return entries.filter(entry => {
                 return activeFilters.every(([type, value]) => {
                     switch (type) {
@@ -455,37 +817,37 @@
         // Weighted Impact Score Calculation
         function calculateWeightedImpactScore(entryList) {
             if (!entryList.length) return { score: 0, total: 0, grade: 'N/A' };
-            
+
             const scopeWeights = { Company: 10, External: 9, Department: 7, Team: 5, Individual: 3 };
             const now = new Date();
             let totalScore = 0;
-            
+
             entryList.forEach(entry => {
                 const scope = entry.impact || 'Team';
                 const baseWeight = scopeWeights[scope] || 5;
-                
+
                 const optionalFields = ['problem', 'alignment', 'challenges', 'tradeoffs', 'soundbites', 'evidence'];
                 const filledFields = optionalFields.filter(field => entry[field] && entry[field].trim().length > 10).length;
                 const richnessMultiplier = 1.0 + (filledFields * 0.1);
-                
+
                 const daysAgo = (now - parseEntryDate(entry)) / (1000 * 60 * 60 * 24);
                 const recencyDecay = daysAgo <= 30 ? 1.0 : daysAgo <= 90 ? 0.85 : daysAgo <= 180 ? 0.7 : 0.5;
-                
+
                 totalScore += baseWeight * richnessMultiplier * recencyDecay;
             });
-            
+
             const benchmark = 20 * 10 * 1.6 * 1.0; // 320
             const normalizedScore = Math.min(100, Math.round((totalScore / benchmark) * 100));
-            
+
             const grade = normalizedScore >= 85 ? 'Elite' : normalizedScore >= 65 ? 'Strong' : normalizedScore >= 45 ? 'Growing' : normalizedScore >= 25 ? 'Building' : 'Starting';
-            
+
             return { score: normalizedScore, total: Math.round(totalScore), grade: grade };
         }
 
         // Consistency Streak Calculation
         function calculateConsistencyStreak(allEntries) {
             if (!allEntries.length) return { current: 0, longest: 0, thisWeek: false };
-            
+
             const weeksWithEntries = new Set();
             allEntries.forEach(entry => {
                 const date = parseEntryDate(entry);
@@ -495,19 +857,19 @@
                 monday.setDate(diff);
                 weeksWithEntries.add(monday.toISOString().split('T')[0]);
             });
-            
+
             if (weeksWithEntries.size === 0) return { current: 0, longest: 0, thisWeek: false };
-            
+
             const thisMonday = new Date();
             const day = thisMonday.getDay();
             const diff = thisMonday.getDate() - day + (day === 0 ? -6 : 1);
             thisMonday.setDate(diff);
             const thisWeekKey = thisMonday.toISOString().split('T')[0];
             const hasThisWeek = weeksWithEntries.has(thisWeekKey);
-            
+
             let currentStreak = 0;
             let checkDate = new Date(thisMonday);
-            
+
             while (true) {
                 const weekKey = checkDate.toISOString().split('T')[0];
                 if (weeksWithEntries.has(weekKey)) {
@@ -517,11 +879,11 @@
                     break;
                 }
             }
-            
+
             const sortedWeeks = Array.from(weeksWithEntries).sort();
             let longestStreak = 0;
             let currentRun = 0;
-            
+
             for (let i = 0; i < sortedWeeks.length; i++) {
                 if (i === 0) {
                     currentRun = 1;
@@ -529,7 +891,7 @@
                     const prevDate = new Date(sortedWeeks[i - 1]);
                     const currDate = new Date(sortedWeeks[i]);
                     const daysDiff = (currDate - prevDate) / (1000 * 60 * 60 * 24);
-                    
+
                     if (daysDiff === 7) {
                         currentRun++;
                     } else {
@@ -539,7 +901,7 @@
                 }
             }
             longestStreak = Math.max(longestStreak, currentRun);
-            
+
             return { current: currentStreak, longest: longestStreak, thisWeek: hasThisWeek };
         }
 
@@ -550,16 +912,16 @@
                 showToast('No achievements to export', 'error');
                 return;
             }
-            
+
             const impactScore = calculateWeightedImpactScore(reviewEntries);
             const streakData = calculateConsistencyStreak(entries);
-            
+
             let reviewText = `PERFORMANCE REVIEW SUMMARY\n`;
             reviewText += `Generated: ${new Date().toLocaleString()}\n`;
             reviewText += `Period: ${dashFilters.timeRange ? `Last ${dashFilters.timeRange} days` : 'All time'}\n`;
             reviewText += `Achievements: ${reviewEntries.length} | Impact Score: ${impactScore.score}/100 (${impactScore.grade}) | Streak: ${streakData.current} weeks\n`;
             reviewText += `${'='.repeat(60)}\n\n`;
-            
+
             reviewEntries.forEach((entry, index) => {
                 const date = parseEntryDate(entry).toLocaleDateString();
                 reviewText += `${index + 1}. ${entry.project} [${entry.impact}] - ${date}\n`;
@@ -568,7 +930,7 @@
                 }
                 reviewText += `\n`;
             });
-            
+
             const blob = new Blob([reviewText], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -604,7 +966,7 @@
             const start = textarea.selectionStart, end = textarea.selectionEnd;
             const text = textarea.value.substring(start, end);
             let rep = '';
-            switch(command) {
+            switch (command) {
                 case 'bold': rep = `**${text || 'text'}**`; break;
                 case 'italic': rep = `*${text || 'text'}*`; break;
                 case 'heading': rep = `### ${text || 'Heading'}`; break;
@@ -643,7 +1005,7 @@
             html = html.replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
             html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             html = html.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
-            
+
             const lines = html.split('\n');
             let inList = false, result = [];
             for (let line of lines) {
@@ -656,42 +1018,42 @@
                 }
             }
             if (inList) result.push('</ul>');
-            
+
             html = result.join('\n').replace(/\n/g, '<br>').replace(/<br><ul>/g, '<ul>').replace(/<\/ul><br>/g, '</ul>').replace(/<li>(.*?)<\/li><br>/g, '<li>$1</li>').replace(/<h3>(.*?)<\/h3><br>/g, '<h3>$1</h3>').replace(/<blockquote>(.*?)<\/blockquote><br>/g, '<blockquote>$1</blockquote>');
             return `<div class="fmt">${html}</div>`;
         }
 
-        function initTheme() { 
-            document.documentElement.className = localStorage.getItem(THEME_KEY) || 'light'; 
+        function initTheme() {
+            document.documentElement.className = localStorage.getItem(THEME_KEY) || 'light';
         }
-        
+
         function toggleTheme() {
             const newTheme = document.documentElement.className === 'dark' ? 'light' : 'dark';
             document.documentElement.className = newTheme;
             localStorage.setItem(THEME_KEY, newTheme);
             lucide.createIcons();
         }
-        
+
         function loadEntries() {
-            try { 
+            try {
                 let stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY) || localStorage.getItem('impactJournal_v10_crossfilter_fixed');
                 entries = stored ? JSON.parse(stored) : [];
-                entries = entries.map(entry => ({ 
-                    ...entry, 
+                entries = entries.map(entry => ({
+                    ...entry,
                     exactDate: entry.exactDate || (entry.createdAt ? entry.createdAt.split('T')[0] : new Date().toISOString().split('T')[0]),
-                    skills: entry.skills || '', 
-                    stakeholders: entry.stakeholders || '', 
-                    alignment: entry.alignment || '', 
-                    tradeoffs: entry.tradeoffs || '', 
-                    soundbites: entry.soundbites || '' 
+                    skills: entry.skills || '',
+                    stakeholders: entry.stakeholders || '',
+                    alignment: entry.alignment || '',
+                    tradeoffs: entry.tradeoffs || '',
+                    soundbites: entry.soundbites || ''
                 }));
-            } catch (e) { 
+            } catch (e) {
                 console.error('Error loading entries:', e);
-                entries = []; 
+                entries = [];
             }
         }
-        
-        function saveEntries() { 
+
+        function saveEntries() {
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
             } catch (error) {
@@ -699,7 +1061,7 @@
                 showToast('Error saving data', 'error');
             }
         }
-        
+
         function getWeekString(dateString) {
             if (!dateString) return 'Uncategorized';
             const d = new Date(dateString + 'T12:00:00');
@@ -719,7 +1081,7 @@
                 if (!entry) return;
                 currentEditId = id;
                 document.getElementById('exact-date').value = entry.exactDate || '';
-                ['impact','category','project','problem','alignment','contribution','stakeholders','skills','challenges','tradeoffs','goals','soundbites','evidence'].forEach(fieldId => {
+                ['impact', 'category', 'project', 'problem', 'alignment', 'contribution', 'stakeholders', 'skills', 'challenges', 'tradeoffs', 'goals', 'soundbites', 'evidence'].forEach(fieldId => {
                     const element = document.getElementById(fieldId);
                     if (element) element.value = entry[fieldId] || '';
                 });
@@ -732,34 +1094,34 @@
             }
         }
 
-        function closeModal() { 
-            document.getElementById('entry-modal').classList.add('hidden'); 
-            currentEditId = null; 
+        function closeModal() {
+            document.getElementById('entry-modal').classList.add('hidden');
+            currentEditId = null;
         }
 
         function handleSubmit(e) {
             e.preventDefault();
             const exactDate = document.getElementById('exact-date').value;
             const weekGroup = getWeekString(exactDate);
-            
+
             const formData = { exactDate, weekGroup };
-            ['impact','category','project','problem','alignment','contribution','stakeholders','skills','challenges','tradeoffs','goals','soundbites','evidence'].forEach(fieldId => {
+            ['impact', 'category', 'project', 'problem', 'alignment', 'contribution', 'stakeholders', 'skills', 'challenges', 'tradeoffs', 'goals', 'soundbites', 'evidence'].forEach(fieldId => {
                 const element = document.getElementById(fieldId);
                 formData[fieldId] = element ? element.value.trim() : '';
             });
 
             if (currentEditId) {
                 const idx = entries.findIndex(e => e.id === currentEditId);
-                if (idx !== -1) { 
-                    entries[idx] = { ...entries[idx], ...formData, updatedAt: new Date().toISOString() }; 
-                    showToast('Updated successfully!'); 
+                if (idx !== -1) {
+                    entries[idx] = { ...entries[idx], ...formData, updatedAt: new Date().toISOString() };
+                    showToast('Updated successfully!');
                 }
             } else {
-                entries.push({ 
-                    id: generateId(), 
-                    ...formData, 
-                    createdAt: new Date().toISOString(), 
-                    updatedAt: new Date().toISOString() 
+                entries.push({
+                    id: generateId(),
+                    ...formData,
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString()
                 });
                 showToast('Achievement logged!');
             }
@@ -774,7 +1136,7 @@
             if (confirm('Delete this achievement? This action cannot be undone.')) {
                 entries = entries.filter(e => e.id !== id);
                 saveEntries();
-                if(entries.length === 0) activeWeekKey = 'dashboard';
+                if (entries.length === 0) activeWeekKey = 'dashboard';
                 renderView();
                 showToast('Achievement deleted');
             }
@@ -783,7 +1145,7 @@
         function groupEntriesByWeek(filteredEntries) {
             const grouped = new Map();
             filteredEntries.forEach(entry => {
-                const key = getWeekString(entry.exactDate); 
+                const key = getWeekString(entry.exactDate);
                 if (!grouped.has(key)) {
                     const monday = parseEntryDate(entry);
                     const day = monday.getDay();
@@ -804,10 +1166,10 @@
             let filtered = entries;
             if (searchTerm.trim()) {
                 const query = searchTerm.toLowerCase();
-                filtered = entries.filter(entry => 
-                    Object.values(entry).some(value => String(value||'').toLowerCase().includes(query))
+                filtered = entries.filter(entry =>
+                    Object.values(entry).some(value => String(value || '').toLowerCase().includes(query))
                 );
-                if(activeWeekKey === 'dashboard') activeWeekKey = 'search';
+                if (activeWeekKey === 'dashboard') activeWeekKey = 'search';
             } else if (activeWeekKey === 'search') {
                 activeWeekKey = 'dashboard';
             }
@@ -831,7 +1193,7 @@
                 </button>
                 <div class="w-px h-6 bg-slate-300 dark:bg-slate-700 mx-1"></div>
             `;
-            
+
             tabsHtml += groupedData.map(group => {
                 const active = group.weekName === activeWeekKey;
                 return `
@@ -852,16 +1214,16 @@
             } else {
                 let displayEntries = filtered;
                 let title = "Search Results";
-                
+
                 if (activeWeekKey !== 'search') {
                     const activeGroup = groupedData.find(g => g.weekName === activeWeekKey);
-                    if (activeGroup) { 
-                        displayEntries = activeGroup.entries; 
-                        title = activeGroup.weekName; 
-                    } else if (groupedData.length > 0) { 
-                        displayEntries = groupedData[0].entries; 
-                        title = groupedData[0].weekName; 
-                        activeWeekKey = groupedData[0].weekName; 
+                    if (activeGroup) {
+                        displayEntries = activeGroup.entries;
+                        title = activeGroup.weekName;
+                    } else if (groupedData.length > 0) {
+                        displayEntries = groupedData[0].entries;
+                        title = groupedData[0].weekName;
+                        activeWeekKey = groupedData[0].weekName;
                     }
                 }
 
@@ -889,11 +1251,11 @@
             const workingEntries = getFilteredEntries();
             const total = workingEntries.length;
             const globalTotal = entries.length;
-            
+
             // Calculate new metrics
             const impactScore = calculateWeightedImpactScore(workingEntries);
             const streakData = calculateConsistencyStreak(entries);
-            
+
             // Data-driven 6-month window calculation
             let endWindowDate = new Date();
             if (entries.length > 0) {
@@ -956,7 +1318,7 @@
             const midScope = (impacts.Department || 0) + (impacts.Team || 0);
             const individualScope = (impacts.Individual || 0);
             const totalForPercent = Math.max(impactEntries.length, 1);
-            
+
             const highScopePct = Math.round((highScope / totalForPercent) * 100);
             const midScopePct = Math.round((midScope / totalForPercent) * 100);
             const individualScopePct = Math.round((individualScope / totalForPercent) * 100);
@@ -966,7 +1328,7 @@
             let recent30Count = 0;
             let recent90Count = 0;
             let highImpactCount = 0;
-            
+
             workingEntries.forEach(entry => {
                 const entryDate = parseEntryDate(entry);
                 if (entryDate >= last30Days) recent30Count++;
@@ -975,8 +1337,8 @@
             });
 
             const maxImpactCount = Math.max(...Object.values(impacts), 1);
-            const topSkills = Object.entries(skillsMap).sort((a,b) => b[1] - a[1]).slice(0, 12);
-            const topStakeholders = Object.entries(stakeholdersMap).sort((a,b) => b[1] - a[1]).slice(0, 8);
+            const topSkills = Object.entries(skillsMap).sort((a, b) => b[1] - a[1]).slice(0, 12);
+            const topStakeholders = Object.entries(stakeholdersMap).sort((a, b) => b[1] - a[1]).slice(0, 8);
             const displayEntries = [...workingEntries].sort((a, b) => parseEntryDate(b) - parseEntryDate(a));
 
             const hasActiveFilter = Object.values(dashFilters).some(v => v !== null);
@@ -991,23 +1353,22 @@
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Time Range</span>
                         </div>
                         ${[
-                            { label: 'All Time', value: null },
-                            { label: '30 Days', value: 30 },
-                            { label: '90 Days', value: 90 },
-                            { label: '6 Months', value: 180 },
-                            { label: '1 Year', value: 365 }
-                        ].map(opt => {
-                            const isActive = dashFilters.timeRange === opt.value;
-                            return `<button 
+                    { label: 'All Time', value: null },
+                    { label: '30 Days', value: 30 },
+                    { label: '90 Days', value: 90 },
+                    { label: '6 Months', value: 180 },
+                    { label: '1 Year', value: 365 }
+                ].map(opt => {
+                    const isActive = dashFilters.timeRange === opt.value;
+                    return `<button 
                                 onclick="toggleDashFilter('timeRange', ${opt.value})"
-                                class="px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
-                                    isActive 
-                                        ? 'bg-primary-600 text-white shadow-md' 
-                                        : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
-                                }">
+                                class="px-3 py-1.5 rounded-full text-xs font-bold transition-all ${isActive
+                            ? 'bg-primary-600 text-white shadow-md'
+                            : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+                        }">
                                 ${opt.label}
                             </button>`;
-                        }).join('')}
+                }).join('')}
                         <div class="ml-auto text-xs text-slate-400 font-medium hidden sm:block">
                             Showing <strong class="text-slate-600 dark:text-slate-300">${total}</strong> of ${globalTotal} achievements
                         </div>
@@ -1023,13 +1384,13 @@
                                             Impact: ${dashFilters.impact} <i data-lucide="x" class="h-3 w-3"></i>
                                         </button>` : ''}
                                     ${dashFilters.month ? (() => {
-                                        const [year, month] = dashFilters.month.split('-');
-                                        const date = new Date(year, month, 1);
-                                        const label = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-                                        return `<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('month')">
+                        const [year, month] = dashFilters.month.split('-');
+                        const date = new Date(year, month, 1);
+                        const label = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                        return `<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('month')">
                                             Month: ${label} <i data-lucide="x" class="h-3 w-3"></i>
                                         </button>`;
-                                    })() : ''}
+                    })() : ''}
                                     ${dashFilters.category ? `
                                         <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('category')">
                                             Category: ${escapeHtml(dashFilters.category)} <i data-lucide="x" class="h-3 w-3"></i>
@@ -1152,11 +1513,11 @@
                                 ` : `
                                     <div class="chart-container">
                                         ${months.map(month => {
-                                            const barHeightPx = month.count > 0 ? Math.max(Math.round((month.count / maxMonthCount) * 160), 4) : 0;
-                                            const isActive = dashFilters.month === month.key;
-                                            const isClickable = month.count > 0;
-                                            
-                                            return `
+                        const barHeightPx = month.count > 0 ? Math.max(Math.round((month.count / maxMonthCount) * 160), 4) : 0;
+                        const isActive = dashFilters.month === month.key;
+                        const isClickable = month.count > 0;
+
+                        return `
                                             <div class="chart-column ${isClickable ? 'dash-interactive' : ''}" 
                                                  ${isClickable ? `onclick="toggleDashFilter('month', '${month.key}')"` : ''} 
                                                  title="${month.count} achievements in ${month.fullLabel}">
@@ -1175,7 +1536,7 @@
                                                     ${month.label}
                                                 </div>
                                             </div>`;
-                                        }).join('')}
+                    }).join('')}
                                     </div>
                                 `}
                             </div>
@@ -1187,12 +1548,12 @@
                                     <span class="text-slate-400 font-normal normal-case text-xs">Click to filter</span>
                                 </h3>
                                 <div class="space-y-3 md:space-y-4">
-                                    ${Object.entries(impacts).filter(([_, count]) => count > 0).length > 0 ? 
-                                        Object.entries(impacts).filter(([_, count]) => count > 0).map(([impact, count]) => {
-                                            const percentage = maxImpactCount > 0 ? (count / maxImpactCount) * 100 : 0;
-                                            const isActive = dashFilters.impact === impact;
-                                            const colors = { 'Company':'bg-purple-500', 'Department':'bg-blue-500', 'External':'bg-emerald-500', 'Team':'bg-amber-500', 'Individual':'bg-slate-500' };
-                                            return `
+                                    ${Object.entries(impacts).filter(([_, count]) => count > 0).length > 0 ?
+                    Object.entries(impacts).filter(([_, count]) => count > 0).map(([impact, count]) => {
+                        const percentage = maxImpactCount > 0 ? (count / maxImpactCount) * 100 : 0;
+                        const isActive = dashFilters.impact === impact;
+                        const colors = { 'Company': 'bg-purple-500', 'Department': 'bg-blue-500', 'External': 'bg-emerald-500', 'Team': 'bg-amber-500', 'Individual': 'bg-slate-500' };
+                        return `
                                             <div class="dash-interactive p-2 md:p-3 -mx-2 md:-mx-3 rounded-lg transition-all ${isActive ? 'bg-slate-100 dark:bg-slate-700 ring-2 ring-primary-500 shadow-md' : 'hover:bg-slate-50 dark:hover:bg-slate-800/80'}" onclick="toggleDashFilter('impact', '${impact}')">
                                                 <div class="flex justify-between items-center text-xs md:text-sm font-bold mb-2 ${isActive ? 'text-primary-600 dark:text-primary-400' : 'text-slate-700 dark:text-slate-300'}">
                                                     <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full ${colors[impact]}"></span>${impact}</span>
@@ -1202,8 +1563,8 @@
                                                     <div class="${colors[impact]} h-2 rounded-full transition-all duration-500" style="width: ${percentage}%"></div>
                                                 </div>
                                             </div>`;
-                                        }).join('')
-                                    : `<p class="text-sm text-slate-400 italic">No impact data for this selection.</p>`}
+                    }).join('')
+                    : `<p class="text-sm text-slate-400 italic">No impact data for this selection.</p>`}
                                 </div>
                             </div>
                         </div>
@@ -1223,9 +1584,9 @@
                                 ${categoryList.length ? `
                                     <div class="space-y-3">
                                         ${categoryList.map(([cat, count]) => {
-                                            const pct = Math.round((count / Math.max(categoryEntries.length, 1)) * 100);
-                                            const isActive = dashFilters.category === cat;
-                                            return `
+                        const pct = Math.round((count / Math.max(categoryEntries.length, 1)) * 100);
+                        const isActive = dashFilters.category === cat;
+                        return `
                                                 <div class="dash-interactive p-2 -mx-2 rounded-lg transition-all ${isActive ? 'bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-400' : 'hover:bg-slate-50 dark:hover:bg-slate-800/80'}" onclick="toggleDashFilter('category', '${escapeHtml(cat)}')">
                                                     <div class="flex justify-between items-center text-xs font-semibold mb-2 ${isActive ? 'text-emerald-700 dark:text-emerald-400' : 'text-slate-600 dark:text-slate-300'}">
                                                         <span class="truncate pr-2">${escapeHtml(cat)}</span>
@@ -1235,7 +1596,7 @@
                                                         <div class="bg-emerald-500 h-1.5 rounded-full transition-all duration-500" style="width: ${pct}%;"></div>
                                                     </div>
                                                 </div>`;
-                                        }).join('')}
+                    }).join('')}
                                     </div>
                                 ` : `<p class="text-sm text-slate-400 italic">No categories in this selection.</p>`}
                             </div>
@@ -1319,12 +1680,12 @@
                                 ${topSkills.length > 0 ? `
                                     <div class="flex flex-wrap gap-2">
                                         ${topSkills.map(([skill, count]) => {
-                                            const isActive = dashFilters.skill === skill;
-                                            return `
+                        const isActive = dashFilters.skill === skill;
+                        return `
                                             <button class="dash-interactive inline-flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-xs font-semibold ${isActive ? 'bg-blue-600 text-white shadow-lg ring-2 ring-blue-300' : 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border border-blue-100 dark:border-blue-800/50 hover:bg-blue-100'}" onclick="toggleDashFilter('skill', '${escapeHtml(skill)}')">
                                                 ${escapeHtml(skill)} <span class="${isActive ? 'bg-blue-800 text-white' : 'bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300'} px-1.5 py-0.5 rounded text-[10px] font-bold">${count}</span>
                                             </button>`;
-                                        }).join('')}
+                    }).join('')}
                                     </div>
                                 ` : `<p class="text-sm text-slate-400 italic">No skills match the current filter.</p>`}
                             </div>
@@ -1340,12 +1701,12 @@
                                 ${topStakeholders.length > 0 ? `
                                     <div class="flex flex-wrap gap-2">
                                         ${topStakeholders.map(([person, count]) => {
-                                            const isActive = dashFilters.stakeholder === person;
-                                            return `
+                        const isActive = dashFilters.stakeholder === person;
+                        return `
                                             <button class="dash-interactive inline-flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-xs font-semibold ${isActive ? 'bg-orange-500 text-white shadow-lg ring-2 ring-orange-300' : 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400 border border-orange-100 dark:border-orange-800/50 hover:bg-orange-100'}" onclick="toggleDashFilter('stakeholder', '${escapeHtml(person)}')">
                                                 ${escapeHtml(person)} <span class="${isActive ? 'bg-orange-700 text-white' : 'bg-orange-100 dark:bg-orange-800/50 text-orange-600 dark:text-orange-300'} px-1.5 py-0.5 rounded text-[10px] font-bold">${count}</span>
                                             </button>`;
-                                        }).join('')}
+                    }).join('')}
                                     </div>
                                 ` : `<p class="text-sm text-slate-400 italic">No stakeholders match the current filter.</p>`}
                             </div>
@@ -1406,10 +1767,10 @@
             `;
         }
 
-        function switchTab(key) { 
-            activeWeekKey = key; 
+        function switchTab(key) {
+            activeWeekKey = key;
             dashFilters = { impact: null, month: null, skill: null, stakeholder: null, category: null, timeRange: null };
-            renderView(document.getElementById('search-input').value); 
+            renderView(document.getElementById('search-input').value);
         }
 
         function renderCard(entry) {
@@ -1504,26 +1865,74 @@
 
         function renderEmptyState() {
             return `
-                <div class="w-full flex flex-col items-center justify-center py-16 md:py-24 text-center fade-in px-4">
-                    <div class="bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/30 dark:to-primary-800/20 rounded-full p-8 md:p-12 mb-8 shadow-xl">
-                        <i data-lucide="rocket" class="h-12 w-12 md:h-16 md:w-16 text-primary-600 dark:text-primary-400"></i>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Launch Your Career Timeline</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg leading-relaxed text-base md:text-lg">
-                        Start documenting your professional achievements with strategic context and comprehensive analytics.
-                    </p>
-                    <button onclick="openModal()" class="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl text-sm md:text-base font-bold flex items-center gap-3 transition-all shadow-xl shadow-primary-600/25 hover:-translate-y-1">
-                        <i data-lucide="plus" class="h-5 w-5 md:h-6 md:w-6"></i> Log Your First Achievement
-                    </button>
+        <div class="relative w-full min-h-[70vh] flex items-center justify-center px-6 py-20 overflow-hidden">
+            <!-- Soft background glow -->
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.15),transparent_60%)] dark:bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.12),transparent_60%)]"></div>
+
+            <div class="max-w-5xl w-full text-center">
+                <!-- Original Rocket Logo -->
+                <div class="mx-auto mb-8 w-24 h-24 flex items-center justify-center rounded-3xl 
+                            bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-white/10 shadow-2xl">
+                    <i data-lucide="rocket" class="w-12 h-12 text-primary-600 dark:text-primary-400"></i>
                 </div>
-            `;
+
+                <!-- Updated Title -->
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
+                    Strategic Career Timeline
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="mx-auto max-w-3xl text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed mb-6">
+                    Transforms your work into clear, measurable career stories.
+                </p>
+
+                <!-- Highlights -->
+                <div class="mx-auto grid md:grid-cols-3 gap-4 text-left max-w-4xl mb-10">
+                    <div class="p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-white/10 shadow-lg">
+                        <h4 class="font-semibold text-slate-900 dark:text-white mb-2">Structured Context</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                            Capture what you did, why it mattered, blockers you solved, and measurable outcomes.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-white/10 shadow-lg">
+                        <h4 class="font-semibold text-slate-900 dark:text-white mb-2">Interactive Analytics</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                            Filter by skills, scope, and time ranges to instantly surface relevant achievements.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-slate-200/60 dark:border-white/10 shadow-lg">
+                        <h4 class="font-semibold text-slate-900 dark:text-white mb-2">Zero Overhead</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                            No accounts. No backend. Just one HTML file that stays completely private.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <button onclick="openModal()" 
+                    class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white 
+                           bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800
+                           shadow-2xl shadow-primary-600/30 transition-all duration-300 hover:-translate-y-1">
+                    <i data-lucide="plus" class="w-5 h-5"></i>
+                    Log Your First Achievement
+                </button>
+
+                <!-- Footnote -->
+                <p class="mt-6 text-xs text-slate-500 dark:text-slate-500">
+                    Zero dependencies • Zero backend • Zero accounts • One file
+                </p>
+            </div>
+        </div>
+    `;
         }
 
         function fillSampleContent() {
             const scope = document.getElementById('impact').value || 'Team';
             const category = document.getElementById('category').value || 'Feature Development';
             document.getElementById('exact-date').valueAsDate = new Date();
-            
+
             const templates = getSampleTemplates(scope, category);
             Object.keys(templates).forEach(key => {
                 const element = document.getElementById(key);
@@ -1554,26 +1963,26 @@
         function showToast(message, type = 'success') {
             const toast = document.getElementById('toast');
             document.getElementById('toast-message').textContent = message;
-            
+
             if (type === 'error') {
                 toast.firstElementChild.className = 'bg-red-600 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-red-700';
             } else {
                 toast.firstElementChild.className = 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-slate-700 dark:border-slate-200';
             }
-            
+
             toast.classList.remove('translate-y-full', 'opacity-0');
             setTimeout(() => toast.classList.add('translate-y-full', 'opacity-0'), 4000);
         }
 
-        function generateId() { 
-            return Date.now().toString(36) + Math.random().toString(36).substr(2); 
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
         }
-        
-        function escapeHtml(text) { 
-            if (!text) return ''; 
-            const div = document.createElement('div'); 
-            div.textContent = text; 
-            return div.innerHTML; 
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
 
         function exportData() {
@@ -1581,32 +1990,32 @@
             try {
                 const blob = new Blob([JSON.stringify(entries, null, 2)], { type: 'application/json' });
                 const url = URL.createObjectURL(blob);
-                const link = document.createElement('a'); 
-                link.href = url; 
+                const link = document.createElement('a');
+                link.href = url;
                 link.download = `impact-journal-${new Date().toISOString().split('T')[0]}.json`;
-                document.body.appendChild(link); 
-                link                .click(); 
-                document.body.removeChild(link); 
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
                 URL.revokeObjectURL(url);
                 showToast(`Exported ${entries.length} achievements!`);
-            } catch (e) { 
+            } catch (e) {
                 console.error('Export error:', e);
-                showToast('Export failed', 'error'); 
+                showToast('Export failed', 'error');
             }
         }
 
         function handleImport(e) {
-            const file = e.target.files[0]; 
+            const file = e.target.files[0];
             if (!file) return;
-            
+
             const reader = new FileReader();
             reader.onload = (event) => {
                 try {
                     const imported = JSON.parse(event.target.result);
                     if (!Array.isArray(imported)) throw new Error('Invalid format');
-                    
+
                     const shouldMerge = confirm(`Import ${imported.length} achievements?\n\nOK = Merge with existing\nCancel = Replace all`);
-                    
+
                     if (shouldMerge) {
                         const uniqueMap = new Map(
                             [...imported, ...entries].map(item => [item.id || generateId(), item])
@@ -1615,7 +2024,7 @@
                     } else {
                         entries = imported;
                     }
-                    
+
                     // Normalize imported entries to ensure compatibility
                     entries = entries.map(entry => {
                         const date = entry.exactDate || (entry.createdAt ? entry.createdAt.split('T')[0] : new Date().toISOString().split('T')[0]);
@@ -1640,34 +2049,35 @@
                             updatedAt: new Date().toISOString()
                         };
                     });
-                    
-                    saveEntries(); 
-                    activeWeekKey = 'dashboard'; 
+
+                    saveEntries();
+                    activeWeekKey = 'dashboard';
                     dashFilters = { impact: null, month: null, skill: null, stakeholder: null, category: null, timeRange: null };
-                    renderView(); 
+                    renderView();
                     showToast(`Imported ${imported.length} achievements!`);
-                } catch (err) { 
+                } catch (err) {
                     console.error('Import error:', err);
-                    showToast('Import failed: Invalid JSON', 'error'); 
+                    showToast('Import failed: Invalid JSON', 'error');
                 }
             };
-            reader.readAsText(file); 
+            reader.readAsText(file);
             e.target.value = '';
         }
 
         // Global function exports for onclick handlers
-        window.openModal = openModal; 
-        window.closeModal = closeModal; 
+        window.openModal = openModal;
+        window.closeModal = closeModal;
         window.deleteEntry = deleteEntry;
-        window.switchTab = switchTab; 
-        window.fillSampleContent = fillSampleContent; 
+        window.switchTab = switchTab;
+        window.fillSampleContent = fillSampleContent;
         window.formatFullscreenText = formatFullscreenText;
-        window.openFullscreenEditor = openFullscreenEditor; 
-        window.closeFullscreenEditor = closeFullscreenEditor; 
-        window.insertTemplate = insertTemplate; 
+        window.openFullscreenEditor = openFullscreenEditor;
+        window.closeFullscreenEditor = closeFullscreenEditor;
+        window.insertTemplate = insertTemplate;
         window.toggleDashFilter = toggleDashFilter;
         window.clearDashFilter = clearDashFilter;
         window.exportPerformanceReview = exportPerformanceReview;
     </script>
 </body>
+
 </html>
