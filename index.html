@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Journal - Strategic Career Timeline</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; min-height: 100vh; display: flex; flex-direction: column; }
+        .dark body { background: #020617; color: #f8fafc; }
+
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .fmt strong { font-weight: 700; color: #059669; background: rgba(5,150,105,0.08); padding: 0 3px; border-radius: 3px; }
+        .dark .fmt strong { color: #34d399; background: rgba(52,211,153,0.1); }
+        .fmt em { font-style: italic; color: #7c3aed; background: rgba(124,58,237,0.08); padding: 0 3px; border-radius: 3px; }
+        .dark .fmt em { color: #a855f7; background: rgba(168,85,247,0.1); }
+        .fmt h3 { font-weight: 700; margin: 12px 0 6px; font-size: 0.95rem; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; }
+        .dark .fmt h3 { color: #e5e7eb; }
+        .fmt blockquote { border-left: 3px solid #3b82f6; padding-left: 12px; margin: 8px 0; color: #4b5563; font-style: italic; background: rgba(59,130,246,0.05); padding-top: 4px; padding-bottom: 4px; border-radius: 0 4px 4px 0; }
+        .dark .fmt blockquote { border-color: #60a5fa; color: #d1d5db; background: rgba(96,165,250,0.1); }
+        .fmt ul { list-style: none; margin: 8px 0; padding: 0; }
+        .fmt li { position: relative; padding-left: 16px; margin-bottom: 6px; line-height: 1.6; }
+        .fmt li:before { content: "▸"; color: #3b82f6; font-weight: bold; position: absolute; left: 0; top: 1px; }
+
+        .micro-input { width: 100%; height: 40px; font-size: 13px; padding: 0 12px; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; color: #0f172a; outline: none; transition: all 0.2s; }
+        .dark .micro-input { background: #020617; border-color: #475569; color: #f9fafb; }
+        .micro-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.1); }
+        .micro-textarea { width: 100%; min-height: 80px; font-size: 13px; padding: 12px; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; color: #0f172a; outline: none; resize: vertical; transition: all 0.2s; line-height: 1.6; }
+        .dark .micro-textarea { background: #020617; border-color: #475569; color: #f9fafb; }
+        .micro-textarea:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.1); }
+        .micro-label { display: flex; justify-content: space-between; align-items: flex-end; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 6px; }
+        .dark .micro-label { color: #9ca3af; }
+        
+        .fmt-toolbar { display: flex; gap: 4px; background: #f8fafc; padding: 4px; border-radius: 6px; border: 1px solid #e2e8f0; }
+        .dark .fmt-toolbar { background: #1e293b; border-color: #475569; }
+        .fmt-btn { height: 28px; min-width: 28px; padding: 0 8px; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #e5e7eb; background: #ffffff; color: #6b7280; cursor: pointer; transition: all 0.2s; font-weight: 600; }
+        .fmt-btn:hover { background: #eff6ff; border-color: #bfdbfe; color: #2563eb; transform: translateY(-1px); }
+        .dark .fmt-btn { background: #020617; border-color: #4b5563; color: #e5e7eb; }
+        .dark .fmt-btn:hover { background: #1d4ed8; border-color: #1d4ed8; color: #f9fafb; }
+
+        .fade-in { animation: fadeIn 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .slide-up { animation: slideUp 0.3s cubic-bezier(0.16,1,0.3,1); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .dash-interactive { cursor: pointer; transition: all 0.3s ease; }
+        .dash-interactive:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(0,0,0,0.1); }
+
+        .chart-container { position: relative; width: 100%; height: 192px; display: flex; align-items: stretch; gap: 8px; }
+        .chart-column { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-width: 0; }
+        .chart-count-label { font-size: 12px; font-weight: 700; line-height: 1; margin-bottom: 6px; transition: color 0.2s; height: 16px; }
+        .chart-bar-area { width: 100%; display: flex; align-items: flex-end; flex: 1; max-width: 40px; }
+        .chart-bar { width: 100%; border-radius: 6px 6px 0 0; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); min-height: 3px; }
+        .chart-month-label { font-size: 11px; font-weight: 600; margin-top: 8px; white-space: nowrap; transition: color 0.2s; }
+    </style>
+</head>
+
+<body>
+    <header class="sticky top-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 md:px-6 py-3 z-30">
+        <div class="max-w-[1800px] mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('dashboard')">
+                <div class="bg-gradient-to-br from-primary-500 to-primary-600 text-white p-2 rounded-xl shadow-lg shadow-primary-500/20">
+                    <i data-lucide="rocket" class="h-5 w-5 md:h-6 md:w-6"></i>
+                </div>
+                <div class="leading-tight">
+                    <h1 class="text-lg md:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Impact Journal</h1>
+                    <div class="text-[9px] md:text-[11px] text-primary-600 dark:text-primary-400 uppercase tracking-wider font-bold">Strategic Career Timeline</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 md:gap-3">
+                <div class="relative group hidden lg:block">
+                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-primary-500 transition-colors"></i>
+                    <input id="search-input" type="search" placeholder="Search achievements..." 
+                           class="h-10 w-56 lg:w-72 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:border-primary-500 rounded-lg pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all">
+                </div>
+                
+                <button onclick="exportPerformanceReview()" class="fmt-btn h-9 md:h-10 px-3 rounded-lg flex items-center gap-1.5" title="Export Performance Review">
+                    <i data-lucide="file-text" class="h-4 w-4"></i>
+                    <span class="text-xs font-bold hidden sm:inline">Review</span>
+                </button>
+                
+                <button onclick="document.getElementById('import-input').click()" class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Import JSON">
+                    <i data-lucide="upload" class="h-4 w-4"></i>
+                </button>
+                <input type="file" id="import-input" accept=".json" class="hidden">
+                
+                <button id="export-btn" class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Export JSON">
+                    <i data-lucide="download" class="h-4 w-4"></i>
+                </button>
+                
+                <button id="theme-toggle" class="fmt-btn h-9 w-9 md:h-10 md:w-10 rounded-lg" title="Toggle Theme">
+                    <i data-lucide="sun" class="h-4 w-4 dark:hidden"></i>
+                    <i data-lucide="moon" class="h-4 w-4 hidden dark:block"></i>
+                </button>
+                
+                <div class="w-px h-6 bg-slate-200 dark:bg-slate-700 mx-1 hidden md:block"></div>
+                
+                <button onclick="openModal()" class="h-9 md:h-10 px-3 md:px-5 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 text-white rounded-lg text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary-600/25 hover:-translate-y-0.5">
+                    <i data-lucide="plus" class="h-4 w-4"></i>
+                    <span class="hidden sm:inline">Log Achievement</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="sticky top-[60px] md:top-[65px] bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 z-20">
+        <div class="max-w-[1800px] mx-auto px-4 md:px-6">
+            <div class="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar" id="tab-navigation"></div>
+        </div>
+    </div>
+
+    <main class="flex-1 flex flex-col p-4 md:p-6 max-w-[1800px] mx-auto w-full">
+        <div id="active-week-banner" class="mb-6 md:mb-8 hidden"></div>
+        <div id="content-container" class="w-full pb-12"></div>
+    </main>
+
+    <div id="toast" class="fixed bottom-6 right-6 transform translate-y-full opacity-0 transition-all duration-300 z-50">
+        <div class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-slate-700 dark:border-slate-200">
+            <i data-lucide="check-circle" class="h-5 w-5 text-emerald-400 dark:text-emerald-600"></i>
+            <span id="toast-message">Success</span>
+        </div>
+    </div>
+
+    <!-- FULL-SCREEN TEXT EDITOR -->
+    <div id="fullscreen-editor" class="fixed inset-0 z-[100] hidden bg-white dark:bg-slate-900 flex flex-col slide-up">
+        <div class="h-16 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-4 md:px-8 shrink-0 bg-slate-50 dark:bg-slate-800">
+            <div class="flex items-center gap-4 md:gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 p-2 rounded-lg hidden sm:block">
+                        <i data-lucide="maximize" class="h-5 w-5"></i>
+                    </div>
+                    <div>
+                        <h2 id="fs-title" class="text-base font-bold text-slate-900 dark:text-white">Editor</h2>
+                    </div>
+                </div>
+                <div class="fmt-toolbar hidden sm:flex">
+                    <button type="button" onclick="formatFullscreenText('bold')" class="fmt-btn font-bold">B</button>
+                    <button type="button" onclick="formatFullscreenText('italic')" class="fmt-btn italic">I</button>
+                    <button type="button" onclick="formatFullscreenText('list')" class="fmt-btn"><i data-lucide="list" class="h-4 w-4"></i></button>
+                    <div class="w-px h-4 bg-slate-300 dark:bg-slate-600 mx-1"></div>
+                    <button type="button" onclick="formatFullscreenText('heading')" class="fmt-btn font-bold">H3</button>
+                    <button type="button" onclick="formatFullscreenText('quote')" class="fmt-btn"><i data-lucide="quote" class="h-3 w-3"></i></button>
+                    <div class="w-px h-4 bg-slate-300 dark:bg-slate-600 mx-1"></div>
+                    <button type="button" onclick="insertTemplate()" class="fmt-btn text-purple-600" title="Insert Template">
+                        <i data-lucide="layout-template" class="h-4 w-4"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 md:gap-4">
+                <span class="text-xs text-slate-400 hidden lg:block"><kbd class="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded">Ctrl+Enter</kbd> to save</span>
+                <button onclick="closeFullscreenEditor(false)" class="px-3 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">Cancel</button>
+                <button onclick="closeFullscreenEditor(true)" class="px-4 py-2 text-sm font-bold bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg flex items-center gap-2">
+                    <i data-lucide="check" class="h-4 w-4"></i> Save
+                </button>
+            </div>
+        </div>
+        <div class="flex-1 p-4 md:p-8 overflow-hidden">
+            <textarea id="fs-textarea" class="w-full h-full max-w-4xl mx-auto text-base md:text-lg bg-transparent border-none outline-none text-slate-900 dark:text-white resize-none leading-relaxed font-medium"></textarea>
+        </div>
+    </div>
+
+    <!-- MAIN ENTRY MODAL -->
+    <div id="entry-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+            <div class="bg-white dark:bg-slate-900 w-full max-w-7xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col my-4 sm:my-8 slide-up">
+                
+                <div class="px-4 sm:px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-800 rounded-t-2xl shrink-0">
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <div class="bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 p-2 sm:p-3 rounded-xl hidden sm:block">
+                            <i data-lucide="edit-3" class="h-6 w-6"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white" id="modal-title">Log Strategic Achievement</h2>
+                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 hidden sm:block">Use <kbd class="px-1 bg-slate-200 dark:bg-slate-700 rounded">Alt+Enter</kbd> in any text box for full-screen editing</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        <i data-lucide="x" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+                    </button>
+                </div>
+
+                <div class="p-4 sm:p-6 overflow-y-auto flex-1 bg-white dark:bg-slate-900 max-h-[80vh] sm:max-h-[75vh]">
+                    <form id="journal-form" class="space-y-6">
+                        <input type="hidden" id="entry-id">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-6 gap-4 bg-slate-50 dark:bg-slate-800/50 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-700">
+                            <div class="md:col-span-1">
+                                <label class="micro-label">Date</label>
+                                <input type="date" id="exact-date" required class="micro-input">
+                            </div>
+                            <div class="md:col-span-1">
+                                <label class="micro-label">Scope</label>
+                                <select id="impact" class="micro-input">
+                                    <option value="Company">Company</option>
+                                    <option value="Department">Department</option>
+                                    <option value="Team" selected>Team</option>
+                                    <option value="External">External</option>
+                                    <option value="Individual">Individual</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-1">
+                                <label class="micro-label">Category</label>
+                                <select id="category" class="micro-input">
+                                    <option value="Feature Development">Feature Development</option>
+                                    <option value="Strategic Initiative">Strategic Initiative</option>
+                                    <option value="Process Improvement">Process Improvement</option>
+                                    <option value="Leadership & Mentoring">Leadership & Mentoring</option>
+                                    <option value="Customer Impact">Customer Impact</option>
+                                    <option value="Problem Solving">Problem Solving</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-3">
+                                <label class="micro-label">Headline Result (Outcome-focused)</label>
+                                <input type="text" id="project" placeholder="e.g., Reduced API latency by 40% saving $10k/mo" required class="micro-input font-bold text-sm sm:text-base border-primary-300 focus:ring-primary-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+                            <div class="space-y-5">
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-blue-600 dark:text-blue-400">1. Context & Problem</span>
+                                        <button type="button" onclick="openFullscreenEditor('problem','Context & Problem')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="problem" rows="4" placeholder="What was broken or needed? Why was this critical?" class="micro-textarea" ondblclick="openFullscreenEditor('problem','Context & Problem')"></textarea>
+                                </div>
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-indigo-600 dark:text-indigo-400">2. Strategic Alignment</span>
+                                        <button type="button" onclick="openFullscreenEditor('alignment','Strategic Alignment')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="alignment" rows="3" placeholder="Which OKR or company goal did this support?" class="micro-textarea" ondblclick="openFullscreenEditor('alignment','Strategic Alignment')"></textarea>
+                                </div>
+                                <div>
+                                    <label class="micro-label"><span>3. Stakeholders & Skills</span></label>
+                                    <input type="text" id="stakeholders" placeholder="Teams involved, people (comma separated)" class="micro-input mb-2">
+                                    <input type="text" id="skills" placeholder="Technologies, methodologies used (comma separated)" class="micro-input">
+                                </div>
+                            </div>
+
+                            <div class="space-y-5">
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-purple-600 dark:text-purple-400">4. Your Specific Actions</span>
+                                        <button type="button" onclick="openFullscreenEditor('contribution','Your Specific Actions')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="contribution" rows="5" required placeholder="What YOU did specifically (use bullets: • Led... • Designed...)" class="micro-textarea" ondblclick="openFullscreenEditor('contribution','Your Specific Actions')"></textarea>
+                                </div>
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-orange-600 dark:text-orange-400">5. Challenges Overcome</span>
+                                        <button type="button" onclick="openFullscreenEditor('challenges','Challenges Overcome')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="challenges" rows="3" placeholder="Obstacles navigated (technical, people, time)" class="micro-textarea" ondblclick="openFullscreenEditor('challenges','Challenges Overcome')"></textarea>
+                                </div>
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-red-600 dark:text-red-400">6. Tradeoffs & Risks</span>
+                                        <button type="button" onclick="openFullscreenEditor('tradeoffs','Tradeoffs & Risks')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="tradeoffs" rows="3" placeholder="What did you consciously trade off? (Scope vs Time)" class="micro-textarea" ondblclick="openFullscreenEditor('tradeoffs','Tradeoffs & Risks')"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="space-y-5">
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-emerald-600 dark:text-emerald-400">7. Quantified Results</span>
+                                        <button type="button" onclick="openFullscreenEditor('goals','Quantified Results')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="goals" rows="5" required placeholder="Metrics, KPIs, revenue, time saved (use **bold** for numbers)" class="micro-textarea border-emerald-300 bg-emerald-50/30 dark:bg-emerald-900/10" ondblclick="openFullscreenEditor('goals','Quantified Results')"></textarea>
+                                </div>
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-pink-600 dark:text-pink-400">8. Resume Soundbites</span>
+                                        <button type="button" onclick="openFullscreenEditor('soundbites','Resume Soundbites')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="soundbites" rows="3" placeholder="1-2 bullet points ready to copy/paste into your resume" class="micro-textarea" ondblclick="openFullscreenEditor('soundbites','Resume Soundbites')"></textarea>
+                                </div>
+                                <div>
+                                    <label class="micro-label">
+                                        <span class="text-teal-600 dark:text-teal-400">9. Lessons & Recognition</span>
+                                        <button type="button" onclick="openFullscreenEditor('evidence','Lessons & Recognition')" class="fmt-btn"><i data-lucide="maximize" class="h-3 w-3"></i></button>
+                                    </label>
+                                    <textarea id="evidence" rows="3" placeholder="What you learned, quotes from managers, awards" class="micro-textarea" ondblclick="openFullscreenEditor('evidence','Lessons & Recognition')"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="px-4 sm:px-6 py-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 rounded-b-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
+                    <button type="button" onclick="fillSampleContent()" class="text-sm font-bold text-slate-500 hover:text-primary-600 flex items-center gap-2 transition-colors w-full sm:w-auto justify-center">
+                        <i data-lucide="wand-2" class="h-4 w-4"></i> Sample Content
+                    </button>
+                    <div class="flex gap-3 w-full sm:w-auto">
+                        <button type="button" onclick="closeModal()" class="flex-1 sm:flex-none px-5 py-2.5 text-sm font-bold text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 text-center">Cancel</button>
+                        <button type="button" onclick="document.getElementById('journal-form').requestSubmit()" class="flex-1 sm:flex-none px-6 py-2.5 text-sm font-bold bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg flex items-center justify-center gap-2">
+                            <i data-lucide="save" class="h-4 w-4"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const STORAGE_KEY = 'impactJournal_v14_enhanced';
+        const LEGACY_STORAGE_KEY = 'impactJournal_v13_fixed';
+        const THEME_KEY = 'impactJournal_theme';
+
+        let entries = [];
+        let currentEditId = null;
+        let activeWeekKey = 'dashboard';
+        let currentFsTargetId = null;
+        
+        // Enhanced multi-filter system with timeRange
+        let dashFilters = {
+            impact: null,
+            month: null,
+            skill: null,
+            stakeholder: null,
+            category: null,
+            timeRange: null
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            loadEntries();
+            renderView();
+            setupListeners();
+        });
+
+        function setupListeners() {
+            document.getElementById('journal-form').addEventListener('submit', handleSubmit);
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                if(activeWeekKey === 'dashboard' && e.target.value.trim() !== '') {
+                    activeWeekKey = 'search'; 
+                }
+                renderView(e.target.value);
+            });
+            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+            document.getElementById('export-btn').addEventListener('click', exportData);
+            document.getElementById('import-input').addEventListener('change', handleImport);
+            
+            document.addEventListener('keydown', (e) => { 
+                if (e.key === 'Escape') {
+                    if (!document.getElementById('fullscreen-editor').classList.contains('hidden')) closeFullscreenEditor(false);
+                    else if (!document.getElementById('entry-modal').classList.contains('hidden')) closeModal();
+                }
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && !document.getElementById('fullscreen-editor').classList.contains('hidden')) {
+                    closeFullscreenEditor(true);
+                }
+                if (e.altKey && e.key === 'Enter' && e.target.tagName === 'TEXTAREA' && e.target.id !== 'fs-textarea') {
+                    e.preventDefault();
+                    const fieldMap = {
+                        'problem': 'Context & Problem', 'alignment': 'Strategic Alignment',
+                        'contribution': 'Your Specific Actions', 'challenges': 'Challenges Overcome',
+                        'tradeoffs': 'Tradeoffs & Risks', 'goals': 'Quantified Results',
+                        'soundbites': 'Resume Soundbites', 'evidence': 'Lessons & Recognition'
+                    };
+                    if (fieldMap[e.target.id]) openFullscreenEditor(e.target.id, fieldMap[e.target.id]);
+                }
+            });
+        }
+
+        function parseEntryDate(entry) {
+            const dateStr = entry.exactDate || (entry.createdAt ? entry.createdAt.split('T')[0] : null);
+            if (!dateStr) return new Date();
+            return new Date(dateStr + 'T12:00:00');
+        }
+
+        function toggleDashFilter(type, value) {
+            if (dashFilters[type] === value) {
+                dashFilters[type] = null;
+            } else {
+                dashFilters[type] = value;
+            }
+            renderView();
+            setTimeout(() => {
+                const resultsSection = document.getElementById('dashboard-results');
+                if (resultsSection) {
+                    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
+
+        function clearDashFilter(type = null) {
+            if (type) {
+                dashFilters[type] = null;
+            } else {
+                dashFilters = { impact: null, month: null, skill: null, stakeholder: null, category: null, timeRange: null };
+            }
+            renderView();
+        }
+
+        function getFilteredEntries(excludeType = null) {
+            const activeFilters = Object.entries(dashFilters).filter(([key, value]) => value !== null && key !== excludeType);
+            if (activeFilters.length === 0) return entries;
+            
+            return entries.filter(entry => {
+                return activeFilters.every(([type, value]) => {
+                    switch (type) {
+                        case 'timeRange':
+                            const entryDate = parseEntryDate(entry);
+                            const cutoffDate = new Date();
+                            cutoffDate.setDate(cutoffDate.getDate() - Number(value));
+                            return entryDate >= cutoffDate;
+                        case 'impact': return entry.impact === value;
+                        case 'category': return entry.category === value;
+                        case 'month':
+                            const d = parseEntryDate(entry);
+                            return `${d.getFullYear()}-${d.getMonth()}` === value;
+                        case 'skill':
+                            if (!entry.skills) return false;
+                            return entry.skills.split(/[,•\n]/).map(s => s.trim()).filter(Boolean).includes(value);
+                        case 'stakeholder':
+                            if (!entry.stakeholders) return false;
+                            return entry.stakeholders.split(/[,•\n]/).map(s => s.trim()).filter(Boolean).includes(value);
+                        default: return true;
+                    }
+                });
+            });
+        }
+
+        // Weighted Impact Score Calculation
+        function calculateWeightedImpactScore(entryList) {
+            if (!entryList.length) return { score: 0, total: 0, grade: 'N/A' };
+            
+            const scopeWeights = { Company: 10, External: 9, Department: 7, Team: 5, Individual: 3 };
+            const now = new Date();
+            let totalScore = 0;
+            
+            entryList.forEach(entry => {
+                const scope = entry.impact || 'Team';
+                const baseWeight = scopeWeights[scope] || 5;
+                
+                const optionalFields = ['problem', 'alignment', 'challenges', 'tradeoffs', 'soundbites', 'evidence'];
+                const filledFields = optionalFields.filter(field => entry[field] && entry[field].trim().length > 10).length;
+                const richnessMultiplier = 1.0 + (filledFields * 0.1);
+                
+                const daysAgo = (now - parseEntryDate(entry)) / (1000 * 60 * 60 * 24);
+                const recencyDecay = daysAgo <= 30 ? 1.0 : daysAgo <= 90 ? 0.85 : daysAgo <= 180 ? 0.7 : 0.5;
+                
+                totalScore += baseWeight * richnessMultiplier * recencyDecay;
+            });
+            
+            const benchmark = 20 * 10 * 1.6 * 1.0; // 320
+            const normalizedScore = Math.min(100, Math.round((totalScore / benchmark) * 100));
+            
+            const grade = normalizedScore >= 85 ? 'Elite' : normalizedScore >= 65 ? 'Strong' : normalizedScore >= 45 ? 'Growing' : normalizedScore >= 25 ? 'Building' : 'Starting';
+            
+            return { score: normalizedScore, total: Math.round(totalScore), grade: grade };
+        }
+
+        // Consistency Streak Calculation
+        function calculateConsistencyStreak(allEntries) {
+            if (!allEntries.length) return { current: 0, longest: 0, thisWeek: false };
+            
+            const weeksWithEntries = new Set();
+            allEntries.forEach(entry => {
+                const date = parseEntryDate(entry);
+                const monday = new Date(date);
+                const day = monday.getDay();
+                const diff = monday.getDate() - day + (day === 0 ? -6 : 1);
+                monday.setDate(diff);
+                weeksWithEntries.add(monday.toISOString().split('T')[0]);
+            });
+            
+            if (weeksWithEntries.size === 0) return { current: 0, longest: 0, thisWeek: false };
+            
+            const thisMonday = new Date();
+            const day = thisMonday.getDay();
+            const diff = thisMonday.getDate() - day + (day === 0 ? -6 : 1);
+            thisMonday.setDate(diff);
+            const thisWeekKey = thisMonday.toISOString().split('T')[0];
+            const hasThisWeek = weeksWithEntries.has(thisWeekKey);
+            
+            let currentStreak = 0;
+            let checkDate = new Date(thisMonday);
+            
+            while (true) {
+                const weekKey = checkDate.toISOString().split('T')[0];
+                if (weeksWithEntries.has(weekKey)) {
+                    currentStreak++;
+                    checkDate.setDate(checkDate.getDate() - 7);
+                } else {
+                    break;
+                }
+            }
+            
+            const sortedWeeks = Array.from(weeksWithEntries).sort();
+            let longestStreak = 0;
+            let currentRun = 0;
+            
+            for (let i = 0; i < sortedWeeks.length; i++) {
+                if (i === 0) {
+                    currentRun = 1;
+                } else {
+                    const prevDate = new Date(sortedWeeks[i - 1]);
+                    const currDate = new Date(sortedWeeks[i]);
+                    const daysDiff = (currDate - prevDate) / (1000 * 60 * 60 * 24);
+                    
+                    if (daysDiff === 7) {
+                        currentRun++;
+                    } else {
+                        longestStreak = Math.max(longestStreak, currentRun);
+                        currentRun = 1;
+                    }
+                }
+            }
+            longestStreak = Math.max(longestStreak, currentRun);
+            
+            return { current: currentStreak, longest: longestStreak, thisWeek: hasThisWeek };
+        }
+
+        // Performance Review Export
+        function exportPerformanceReview() {
+            const reviewEntries = getFilteredEntries();
+            if (!reviewEntries.length) {
+                showToast('No achievements to export', 'error');
+                return;
+            }
+            
+            const impactScore = calculateWeightedImpactScore(reviewEntries);
+            const streakData = calculateConsistencyStreak(entries);
+            
+            let reviewText = `PERFORMANCE REVIEW SUMMARY\n`;
+            reviewText += `Generated: ${new Date().toLocaleString()}\n`;
+            reviewText += `Period: ${dashFilters.timeRange ? `Last ${dashFilters.timeRange} days` : 'All time'}\n`;
+            reviewText += `Achievements: ${reviewEntries.length} | Impact Score: ${impactScore.score}/100 (${impactScore.grade}) | Streak: ${streakData.current} weeks\n`;
+            reviewText += `${'='.repeat(60)}\n\n`;
+            
+            reviewEntries.forEach((entry, index) => {
+                const date = parseEntryDate(entry).toLocaleDateString();
+                reviewText += `${index + 1}. ${entry.project} [${entry.impact}] - ${date}\n`;
+                if (entry.goals) {
+                    reviewText += `   Results: ${entry.goals.replace(/[*#•▸]/g, '').substring(0, 200)}\n`;
+                }
+                reviewText += `\n`;
+            });
+            
+            const blob = new Blob([reviewText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `performance-review-${new Date().toISOString().split('T')[0]}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('Performance review exported!');
+        }
+
+        // Full-screen editor functions
+        function openFullscreenEditor(targetId, title) {
+            currentFsTargetId = targetId;
+            const fsTextarea = document.getElementById('fs-textarea');
+            document.getElementById('fs-title').textContent = title;
+            fsTextarea.value = document.getElementById(targetId).value;
+            document.getElementById('fullscreen-editor').classList.remove('hidden');
+            setTimeout(() => { fsTextarea.focus(); fsTextarea.setSelectionRange(fsTextarea.value.length, fsTextarea.value.length); }, 100);
+        }
+
+        function closeFullscreenEditor(saveChanges) {
+            if (saveChanges && currentFsTargetId) {
+                document.getElementById(currentFsTargetId).value = document.getElementById('fs-textarea').value;
+            }
+            document.getElementById('fullscreen-editor').classList.add('hidden');
+            currentFsTargetId = null;
+        }
+
+        function formatFullscreenText(command) {
+            const textarea = document.getElementById('fs-textarea');
+            const start = textarea.selectionStart, end = textarea.selectionEnd;
+            const text = textarea.value.substring(start, end);
+            let rep = '';
+            switch(command) {
+                case 'bold': rep = `**${text || 'text'}**`; break;
+                case 'italic': rep = `*${text || 'text'}*`; break;
+                case 'heading': rep = `### ${text || 'Heading'}`; break;
+                case 'quote': rep = `> ${text || 'Quote'}`; break;
+                case 'list': rep = text ? text.split('\n').map(l => l.trim() ? `• ${l}` : l).join('\n') : '• '; break;
+            }
+            textarea.value = textarea.value.substring(0, start) + rep + textarea.value.substring(end);
+            textarea.focus();
+            const newPos = text ? start + rep.length : start + rep.length - (command === 'list' ? 0 : (command === 'heading' ? 4 : 2));
+            textarea.setSelectionRange(newPos, newPos);
+        }
+
+        function insertTemplate() {
+            const textarea = document.getElementById('fs-textarea');
+            const templates = {
+                'problem': '### Business Context\n**Situation:** \n**Problem:** \n**Risk:** ',
+                'alignment': '**Company OKR:** \n**Strategic Impact:** ',
+                'contribution': '• **Led:** \n• **Designed:** \n• **Implemented:** \n• **Coordinated:** ',
+                'challenges': '• **Technical:** \n• **Stakeholder:** ',
+                'tradeoffs': '• **Scope vs Timeline:** \n• **Quality vs Speed:** ',
+                'goals': '• **Revenue Impact:** \n• **Efficiency Gains:** \n• **Quality Metrics:** ',
+                'soundbites': '• Led [team] to achieve [result] in [timeframe]\n• Delivered [outcome] resulting in [impact]',
+                'evidence': '**Recognition:**\n> *""*\n\n**Lessons Learned:**\n• '
+            };
+            const template = templates[currentFsTargetId] || '### Section\n• **Key Point:** \n• **Result:** ';
+            const start = textarea.selectionStart;
+            textarea.value = textarea.value.substring(0, start) + template + textarea.value.substring(textarea.selectionEnd);
+            textarea.focus();
+            textarea.setSelectionRange(start + template.length, start + template.length);
+        }
+
+        function parseMarkdown(text) {
+            if (!text) return '';
+            let html = escapeHtml(text);
+            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            html = html.replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
+            
+            const lines = html.split('\n');
+            let inList = false, result = [];
+            for (let line of lines) {
+                if (line.trim().match(/^[•▸\-]\s+(.+)$/)) {
+                    if (!inList) { result.push('<ul>'); inList = true; }
+                    result.push(line.replace(/^[•▸\-]\s+(.+)$/, '<li>$1</li>'));
+                } else {
+                    if (inList) { result.push('</ul>'); inList = false; }
+                    result.push(line);
+                }
+            }
+            if (inList) result.push('</ul>');
+            
+            html = result.join('\n').replace(/\n/g, '<br>').replace(/<br><ul>/g, '<ul>').replace(/<\/ul><br>/g, '</ul>').replace(/<li>(.*?)<\/li><br>/g, '<li>$1</li>').replace(/<h3>(.*?)<\/h3><br>/g, '<h3>$1</h3>').replace(/<blockquote>(.*?)<\/blockquote><br>/g, '<blockquote>$1</blockquote>');
+            return `<div class="fmt">${html}</div>`;
+        }
+
+        function initTheme() { 
+            document.documentElement.className = localStorage.getItem(THEME_KEY) || 'light'; 
+        }
+        
+        function toggleTheme() {
+            const newTheme = document.documentElement.className === 'dark' ? 'light' : 'dark';
+            document.documentElement.className = newTheme;
+            localStorage.setItem(THEME_KEY, newTheme);
+            lucide.createIcons();
+        }
+        
+        function loadEntries() {
+            try { 
+                let stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY) || localStorage.getItem('impactJournal_v10_crossfilter_fixed');
+                entries = stored ? JSON.parse(stored) : [];
+                entries = entries.map(entry => ({ 
+                    ...entry, 
+                    exactDate: entry.exactDate || (entry.createdAt ? entry.createdAt.split('T')[0] : new Date().toISOString().split('T')[0]),
+                    skills: entry.skills || '', 
+                    stakeholders: entry.stakeholders || '', 
+                    alignment: entry.alignment || '', 
+                    tradeoffs: entry.tradeoffs || '', 
+                    soundbites: entry.soundbites || '' 
+                }));
+            } catch (e) { 
+                console.error('Error loading entries:', e);
+                entries = []; 
+            }
+        }
+        
+        function saveEntries() { 
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+            } catch (error) {
+                console.error('Error saving entries:', error);
+                showToast('Error saving data', 'error');
+            }
+        }
+        
+        function getWeekString(dateString) {
+            if (!dateString) return 'Uncategorized';
+            const d = new Date(dateString + 'T12:00:00');
+            const day = d.getDay();
+            const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+            const mon = new Date(d.setDate(diff));
+            const sun = new Date(mon);
+            sun.setDate(mon.getDate() + 6);
+            const fmt = (x) => x.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            return `${fmt(mon)} – ${fmt(sun)}, ${mon.getFullYear()}`;
+        }
+
+        function openModal(id = null) {
+            document.getElementById('entry-modal').classList.remove('hidden');
+            if (id) {
+                const entry = entries.find(e => e.id === id);
+                if (!entry) return;
+                currentEditId = id;
+                document.getElementById('exact-date').value = entry.exactDate || '';
+                ['impact','category','project','problem','alignment','contribution','stakeholders','skills','challenges','tradeoffs','goals','soundbites','evidence'].forEach(fieldId => {
+                    const element = document.getElementById(fieldId);
+                    if (element) element.value = entry[fieldId] || '';
+                });
+                document.getElementById('modal-title').textContent = 'Edit Achievement';
+            } else {
+                currentEditId = null;
+                document.getElementById('journal-form').reset();
+                document.getElementById('exact-date').valueAsDate = new Date();
+                document.getElementById('modal-title').textContent = 'Log Strategic Achievement';
+            }
+        }
+
+        function closeModal() { 
+            document.getElementById('entry-modal').classList.add('hidden'); 
+            currentEditId = null; 
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const exactDate = document.getElementById('exact-date').value;
+            const weekGroup = getWeekString(exactDate);
+            
+            const formData = { exactDate, weekGroup };
+            ['impact','category','project','problem','alignment','contribution','stakeholders','skills','challenges','tradeoffs','goals','soundbites','evidence'].forEach(fieldId => {
+                const element = document.getElementById(fieldId);
+                formData[fieldId] = element ? element.value.trim() : '';
+            });
+
+            if (currentEditId) {
+                const idx = entries.findIndex(e => e.id === currentEditId);
+                if (idx !== -1) { 
+                    entries[idx] = { ...entries[idx], ...formData, updatedAt: new Date().toISOString() }; 
+                    showToast('Updated successfully!'); 
+                }
+            } else {
+                entries.push({ 
+                    id: generateId(), 
+                    ...formData, 
+                    createdAt: new Date().toISOString(), 
+                    updatedAt: new Date().toISOString() 
+                });
+                showToast('Achievement logged!');
+            }
+            saveEntries();
+            activeWeekKey = 'dashboard';
+            clearDashFilter();
+            renderView();
+            closeModal();
+        }
+
+        function deleteEntry(id) {
+            if (confirm('Delete this achievement? This action cannot be undone.')) {
+                entries = entries.filter(e => e.id !== id);
+                saveEntries();
+                if(entries.length === 0) activeWeekKey = 'dashboard';
+                renderView();
+                showToast('Achievement deleted');
+            }
+        }
+
+        function groupEntriesByWeek(filteredEntries) {
+            const grouped = new Map();
+            filteredEntries.forEach(entry => {
+                const key = getWeekString(entry.exactDate); 
+                if (!grouped.has(key)) {
+                    const monday = parseEntryDate(entry);
+                    const day = monday.getDay();
+                    const diff = monday.getDate() - day + (day === 0 ? -6 : 1);
+                    monday.setDate(diff);
+                    grouped.set(key, { weekName: key, sortValue: monday.getTime(), entries: [] });
+                }
+                grouped.get(key).entries.push(entry);
+            });
+            const sorted = Array.from(grouped.values()).sort((a, b) => b.sortValue - a.sortValue);
+            sorted.forEach(week => {
+                week.entries.sort((a, b) => parseEntryDate(b) - parseEntryDate(a));
+            });
+            return sorted;
+        }
+
+        function renderView(searchTerm = '') {
+            let filtered = entries;
+            if (searchTerm.trim()) {
+                const query = searchTerm.toLowerCase();
+                filtered = entries.filter(entry => 
+                    Object.values(entry).some(value => String(value||'').toLowerCase().includes(query))
+                );
+                if(activeWeekKey === 'dashboard') activeWeekKey = 'search';
+            } else if (activeWeekKey === 'search') {
+                activeWeekKey = 'dashboard';
+            }
+
+            const groupedData = groupEntriesByWeek(filtered);
+            const tabNav = document.getElementById('tab-navigation');
+            const container = document.getElementById('content-container');
+            const banner = document.getElementById('active-week-banner');
+
+            if (entries.length === 0) {
+                tabNav.innerHTML = '';
+                banner.classList.add('hidden');
+                container.innerHTML = renderEmptyState();
+                lucide.createIcons();
+                return;
+            }
+
+            let tabsHtml = `
+                <button onclick="switchTab('dashboard')" class="shrink-0 px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${activeWeekKey === 'dashboard' ? 'bg-primary-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50'}">
+                    <i data-lucide="layout-dashboard" class="h-4 w-4"></i> Dashboard
+                </button>
+                <div class="w-px h-6 bg-slate-300 dark:bg-slate-700 mx-1"></div>
+            `;
+            
+            tabsHtml += groupedData.map(group => {
+                const active = group.weekName === activeWeekKey;
+                return `
+                    <button onclick="switchTab('${escapeHtml(group.weekName)}')" class="shrink-0 px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${active ? 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50'}">
+                        <i data-lucide="calendar" class="h-4 w-4"></i>
+                        <div class="text-left">
+                            <div class="font-bold whitespace-nowrap">${escapeHtml(group.weekName)}</div>
+                            <div class="text-[10px] opacity-80">${group.entries.length} entry${group.entries.length !== 1 ? 's' : ''}</div>
+                        </div>
+                    </button>
+                `;
+            }).join('');
+            tabNav.innerHTML = tabsHtml;
+
+            if (activeWeekKey === 'dashboard') {
+                banner.classList.add('hidden');
+                container.innerHTML = renderDashboard();
+            } else {
+                let displayEntries = filtered;
+                let title = "Search Results";
+                
+                if (activeWeekKey !== 'search') {
+                    const activeGroup = groupedData.find(g => g.weekName === activeWeekKey);
+                    if (activeGroup) { 
+                        displayEntries = activeGroup.entries; 
+                        title = activeGroup.weekName; 
+                    } else if (groupedData.length > 0) { 
+                        displayEntries = groupedData[0].entries; 
+                        title = groupedData[0].weekName; 
+                        activeWeekKey = groupedData[0].weekName; 
+                    }
+                }
+
+                banner.classList.remove('hidden');
+                banner.innerHTML = `
+                    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 sm:p-6 shadow-sm flex justify-between items-center fade-in">
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <div class="bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 p-2 sm:p-3 rounded-xl">
+                                <i data-lucide="${activeWeekKey === 'search' ? 'search' : 'calendar-check'}" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">${escapeHtml(title)}</h2>
+                                <p class="text-xs sm:text-sm text-slate-500 font-medium">${displayEntries.length} achievement${displayEntries.length !== 1 ? 's' : ''} found</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                container.innerHTML = `<div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 items-start">${displayEntries.map(entry => renderCard(entry)).join('')}</div>`;
+            }
+            lucide.createIcons();
+        }
+
+        function renderDashboard() {
+            const workingEntries = getFilteredEntries();
+            const total = workingEntries.length;
+            const globalTotal = entries.length;
+            
+            // Calculate new metrics
+            const impactScore = calculateWeightedImpactScore(workingEntries);
+            const streakData = calculateConsistencyStreak(entries);
+            
+            // Data-driven 6-month window calculation
+            let endWindowDate = new Date();
+            if (entries.length > 0) {
+                const latestEntryDate = entries.map(parseEntryDate).sort((a, b) => b - a)[0];
+                endWindowDate = latestEntryDate;
+            }
+            const startWindowDate = new Date(endWindowDate.getFullYear(), endWindowDate.getMonth() - 5, 1);
+
+            const months = [];
+            for (let i = 0; i < 6; i++) {
+                const d = new Date(startWindowDate.getFullYear(), startWindowDate.getMonth() + i, 1);
+                months.push({
+                    label: d.toLocaleDateString('en-US', { month: 'short' }),
+                    fullLabel: d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
+                    count: 0,
+                    key: `${d.getFullYear()}-${d.getMonth()}`
+                });
+            }
+
+            const timeEntries = getFilteredEntries('month');
+            timeEntries.forEach(entry => {
+                const d = parseEntryDate(entry);
+                const monthKey = `${d.getFullYear()}-${d.getMonth()}`;
+                const bucket = months.find(m => m.key === monthKey);
+                if (bucket) bucket.count++;
+            });
+            const maxMonthCount = Math.max(...months.map(m => m.count), 1);
+
+            const impacts = { Company: 0, Department: 0, Team: 0, External: 0, Individual: 0 };
+            const impactEntries = getFilteredEntries('impact');
+            impactEntries.forEach(e => { if (impacts[e.impact] !== undefined) impacts[e.impact]++; });
+
+            const skillsMap = {};
+            const skillEntries = getFilteredEntries('skill');
+            skillEntries.forEach(e => {
+                if (e.skills) e.skills.split(/[,•\n]/).forEach(s => {
+                    const clean = s.trim();
+                    if (clean) skillsMap[clean] = (skillsMap[clean] || 0) + 1;
+                });
+            });
+
+            const stakeholdersMap = {};
+            const stakeholderEntries = getFilteredEntries('stakeholder');
+            stakeholderEntries.forEach(e => {
+                if (e.stakeholders) e.stakeholders.split(/[,•\n]/).forEach(s => {
+                    const clean = s.trim();
+                    if (clean) stakeholdersMap[clean] = (stakeholdersMap[clean] || 0) + 1;
+                });
+            });
+
+            const categories = {};
+            const categoryEntries = getFilteredEntries('category');
+            categoryEntries.forEach(e => {
+                const cat = e.category || 'Uncategorized';
+                categories[cat] = (categories[cat] || 0) + 1;
+            });
+            const categoryList = Object.entries(categories).sort((a, b) => b[1] - a[1]);
+
+            const highScope = (impacts.Company || 0) + (impacts.External || 0);
+            const midScope = (impacts.Department || 0) + (impacts.Team || 0);
+            const individualScope = (impacts.Individual || 0);
+            const totalForPercent = Math.max(impactEntries.length, 1);
+            
+            const highScopePct = Math.round((highScope / totalForPercent) * 100);
+            const midScopePct = Math.round((midScope / totalForPercent) * 100);
+            const individualScopePct = Math.round((individualScope / totalForPercent) * 100);
+
+            const last30Days = new Date(); last30Days.setDate(last30Days.getDate() - 30);
+            const last90Days = new Date(); last90Days.setDate(last90Days.getDate() - 90);
+            let recent30Count = 0;
+            let recent90Count = 0;
+            let highImpactCount = 0;
+            
+            workingEntries.forEach(entry => {
+                const entryDate = parseEntryDate(entry);
+                if (entryDate >= last30Days) recent30Count++;
+                if (entryDate >= last90Days) recent90Count++;
+                if (entry.impact === 'Company' || entry.impact === 'External') highImpactCount++;
+            });
+
+            const maxImpactCount = Math.max(...Object.values(impacts), 1);
+            const topSkills = Object.entries(skillsMap).sort((a,b) => b[1] - a[1]).slice(0, 12);
+            const topStakeholders = Object.entries(stakeholdersMap).sort((a,b) => b[1] - a[1]).slice(0, 8);
+            const displayEntries = [...workingEntries].sort((a, b) => parseEntryDate(b) - parseEntryDate(a));
+
+            const hasActiveFilter = Object.values(dashFilters).some(v => v !== null);
+
+            return `
+                <div class="space-y-6 md:space-y-8 fade-in">
+                    
+                    <!-- Time Range Selector -->
+                    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 shadow-sm flex flex-wrap items-center gap-3">
+                        <div class="flex items-center gap-2 mr-2">
+                            <i data-lucide="clock" class="h-4 w-4 text-slate-400"></i>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Time Range</span>
+                        </div>
+                        ${[
+                            { label: 'All Time', value: null },
+                            { label: '30 Days', value: 30 },
+                            { label: '90 Days', value: 90 },
+                            { label: '6 Months', value: 180 },
+                            { label: '1 Year', value: 365 }
+                        ].map(opt => {
+                            const isActive = dashFilters.timeRange === opt.value;
+                            return `<button 
+                                onclick="toggleDashFilter('timeRange', ${opt.value})"
+                                class="px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                                    isActive 
+                                        ? 'bg-primary-600 text-white shadow-md' 
+                                        : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+                                }">
+                                ${opt.label}
+                            </button>`;
+                        }).join('')}
+                        <div class="ml-auto text-xs text-slate-400 font-medium hidden sm:block">
+                            Showing <strong class="text-slate-600 dark:text-slate-300">${total}</strong> of ${globalTotal} achievements
+                        </div>
+                    </div>
+
+                    ${hasActiveFilter ? `
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 md:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
+                            <div>
+                                <p class="text-sm text-blue-800 dark:text-blue-300 font-semibold mb-2">Active Filters</p>
+                                <div class="flex flex-wrap gap-2">
+                                    ${dashFilters.impact ? `
+                                        <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('impact')">
+                                            Impact: ${dashFilters.impact} <i data-lucide="x" class="h-3 w-3"></i>
+                                        </button>` : ''}
+                                    ${dashFilters.month ? (() => {
+                                        const [year, month] = dashFilters.month.split('-');
+                                        const date = new Date(year, month, 1);
+                                        const label = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                                        return `<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('month')">
+                                            Month: ${label} <i data-lucide="x" class="h-3 w-3"></i>
+                                        </button>`;
+                                    })() : ''}
+                                    ${dashFilters.category ? `
+                                        <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('category')">
+                                            Category: ${escapeHtml(dashFilters.category)} <i data-lucide="x" class="h-3 w-3"></i>
+                                        </button>` : ''}
+                                    ${dashFilters.skill ? `
+                                        <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('skill')">
+                                            Skill: ${escapeHtml(dashFilters.skill)} <i data-lucide="x" class="h-3 w-3"></i>
+                                        </button>` : ''}
+                                    ${dashFilters.stakeholder ? `
+                                        <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('stakeholder')">
+                                            Stakeholder: ${escapeHtml(dashFilters.stakeholder)} <i data-lucide="x" class="h-3 w-3"></i>
+                                        </button>` : ''}
+                                    ${dashFilters.timeRange ? `
+                                        <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/70 text-xs font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:bg-blue-50 transition-colors" onclick="clearDashFilter('timeRange')">
+                                            Time: Last ${dashFilters.timeRange} days <i data-lucide="x" class="h-3 w-3"></i>
+                                        </button>` : ''}
+                                </div>
+                            </div>
+                            <button onclick="clearDashFilter()" class="w-full md:w-auto bg-white dark:bg-slate-800 border border-blue-200 dark:border-blue-700 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="filter-x" class="h-4 w-4"></i> Clear All
+                            </button>
+                        </div>
+                    ` : ''}
+
+                    <!-- Enhanced Hero Metrics Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                        
+                        <!-- Total Impact -->
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-5 md:p-6 text-white shadow-xl shadow-primary-600/20">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-primary-100 text-xs font-bold uppercase tracking-wider mb-1">
+                                        ${hasActiveFilter ? 'Filtered' : 'Total'} Impact
+                                    </p>
+                                    <h3 class="text-3xl md:text-4xl font-extrabold">${total}</h3>
+                                    ${hasActiveFilter && total !== globalTotal ? `<p class="text-primary-200 text-xs mt-1">of ${globalTotal} total</p>` : ''}
+                                </div>
+                                <div class="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
+                                    <i data-lucide="award" class="h-6 w-6"></i>
+                                </div>
+                            </div>
+                            <p class="text-primary-100 text-xs font-medium">Achievements documented</p>
+                        </div>
+
+                        <!-- Weighted Impact Score -->
+                        <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 md:p-6 shadow-sm">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Impact Score</p>
+                                    <h3 class="text-3xl md:text-4xl font-extrabold text-purple-600 dark:text-purple-400">${impactScore.score}</h3>
+                                    <p class="text-xs text-slate-400 mt-1">${impactScore.grade} • ${impactScore.total} pts</p>
+                                </div>
+                                <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-xl">
+                                    <i data-lucide="zap" class="h-6 w-6 text-purple-600 dark:text-purple-400"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-500 text-xs font-medium">Scope × richness × recency</p>
+                        </div>
+
+                        <!-- Consistency Streak -->
+                        <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 md:p-6 shadow-sm ${streakData.current >= 4 ? 'ring-2 ring-orange-200 dark:ring-orange-800' : ''}">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Weekly Streak</p>
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="text-3xl md:text-4xl font-extrabold text-orange-500 dark:text-orange-400">${streakData.current}</h3>
+                                        ${streakData.current >= 4 ? '<span class="text-xl">🔥</span>' : streakData.current > 0 ? '<span class="text-xl">📝</span>' : ''}
+                                    </div>
+                                    <p class="text-xs text-slate-400 mt-1">Best: ${streakData.longest} weeks</p>
+                                </div>
+                                <div class="p-3 bg-orange-100 dark:bg-orange-900/30 rounded-xl">
+                                    <i data-lucide="calendar-check" class="h-6 w-6 text-orange-500 dark:text-orange-400"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-500 text-xs font-medium">
+                                ${streakData.thisWeek ? 'Logged this week ✓' : 'Log this week to continue'}
+                            </p>
+                        </div>
+
+                        <!-- High-Impact -->
+                        <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 md:p-6 shadow-sm">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">High-Impact</p>
+                                    <h3 class="text-3xl md:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400">${highImpactCount}</h3>
+                                </div>
+                                <div class="p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl">
+                                    <i data-lucide="globe" class="h-6 w-6 text-emerald-600 dark:text-emerald-400"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-500 text-xs font-medium">Company/External scope</p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Analytics Engine -->
+                    <div class="bg-gradient-to-br from-slate-50/80 to-white dark:from-slate-800/50 dark:to-slate-900/50 rounded-2xl p-4 md:p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="bg-slate-800 dark:bg-slate-100 text-white dark:text-slate-900 p-2 rounded-lg">
+                                <i data-lucide="bar-chart-2" class="h-5 w-5"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-base md:text-lg font-bold text-slate-800 dark:text-slate-200">Interactive Analytics Engine</h2>
+                                <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400">Click any chart, bar, or tag to cross-filter your achievements instantly</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                            
+                            <!-- 6-Month Activity Chart -->
+                            <div class="lg:col-span-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-6 flex items-center justify-between">
+                                    <span>6-Month Activity Trend</span>
+                                    <span class="text-slate-400 font-normal normal-case text-xs">Click bars to filter</span>
+                                </h3>
+                                ${maxMonthCount === 0 ? `
+                                    <div class="flex flex-col items-center justify-center h-48 text-center text-slate-400 dark:text-slate-500 border border-dashed border-slate-200 dark:border-slate-700 rounded-xl">
+                                        <i data-lucide="bar-chart-2" class="h-8 w-8 mb-2"></i>
+                                        <p class="text-sm font-semibold">No activity in the selected period</p>
+                                    </div>
+                                ` : `
+                                    <div class="chart-container">
+                                        ${months.map(month => {
+                                            const barHeightPx = month.count > 0 ? Math.max(Math.round((month.count / maxMonthCount) * 160), 4) : 0;
+                                            const isActive = dashFilters.month === month.key;
+                                            const isClickable = month.count > 0;
+                                            
+                                            return `
+                                            <div class="chart-column ${isClickable ? 'dash-interactive' : ''}" 
+                                                 ${isClickable ? `onclick="toggleDashFilter('month', '${month.key}')"` : ''} 
+                                                 title="${month.count} achievements in ${month.fullLabel}">
+                                                
+                                                <div class="chart-count-label" style="color: ${isActive ? '#2563eb' : month.count > 0 ? '#94a3b8' : 'transparent'}">
+                                                    ${month.count > 0 ? month.count : ''}
+                                                </div>
+                                                
+                                                <div class="chart-bar-area">
+                                                    <div class="chart-bar" 
+                                                         style="height: ${barHeightPx}px; background-color: ${isActive ? '#2563eb' : isClickable ? '#bfdbfe' : '#e2e8f0'}; ${isActive ? 'box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.3);' : ''}">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="chart-month-label" style="color: ${isActive ? '#2563eb' : '#6b7280'}; font-weight: ${isActive ? '700' : '600'}">
+                                                    ${month.label}
+                                                </div>
+                                            </div>`;
+                                        }).join('')}
+                                    </div>
+                                `}
+                            </div>
+
+                            <!-- Impact Scope Chart -->
+                            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-5 flex items-center justify-between">
+                                    <span>Impact Scope</span>
+                                    <span class="text-slate-400 font-normal normal-case text-xs">Click to filter</span>
+                                </h3>
+                                <div class="space-y-3 md:space-y-4">
+                                    ${Object.entries(impacts).filter(([_, count]) => count > 0).length > 0 ? 
+                                        Object.entries(impacts).filter(([_, count]) => count > 0).map(([impact, count]) => {
+                                            const percentage = maxImpactCount > 0 ? (count / maxImpactCount) * 100 : 0;
+                                            const isActive = dashFilters.impact === impact;
+                                            const colors = { 'Company':'bg-purple-500', 'Department':'bg-blue-500', 'External':'bg-emerald-500', 'Team':'bg-amber-500', 'Individual':'bg-slate-500' };
+                                            return `
+                                            <div class="dash-interactive p-2 md:p-3 -mx-2 md:-mx-3 rounded-lg transition-all ${isActive ? 'bg-slate-100 dark:bg-slate-700 ring-2 ring-primary-500 shadow-md' : 'hover:bg-slate-50 dark:hover:bg-slate-800/80'}" onclick="toggleDashFilter('impact', '${impact}')">
+                                                <div class="flex justify-between items-center text-xs md:text-sm font-bold mb-2 ${isActive ? 'text-primary-600 dark:text-primary-400' : 'text-slate-700 dark:text-slate-300'}">
+                                                    <span class="flex items-center gap-2"><span class="w-3 h-3 rounded-full ${colors[impact]}"></span>${impact}</span>
+                                                    <span>${count}</span>
+                                                </div>
+                                                <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2">
+                                                    <div class="${colors[impact]} h-2 rounded-full transition-all duration-500" style="width: ${percentage}%"></div>
+                                                </div>
+                                            </div>`;
+                                        }).join('')
+                                    : `<p class="text-sm text-slate-400 italic">No impact data for this selection.</p>`}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Enhanced Analytics Row -->
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                            
+                            <!-- Category Distribution -->
+                            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <div class="flex items-center justify-between mb-5">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="layers" class="h-4 w-4 text-emerald-500"></i>
+                                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Category Mix</h3>
+                                    </div>
+                                    <span class="text-slate-400 text-xs">Click to filter</span>
+                                </div>
+                                ${categoryList.length ? `
+                                    <div class="space-y-3">
+                                        ${categoryList.map(([cat, count]) => {
+                                            const pct = Math.round((count / Math.max(categoryEntries.length, 1)) * 100);
+                                            const isActive = dashFilters.category === cat;
+                                            return `
+                                                <div class="dash-interactive p-2 -mx-2 rounded-lg transition-all ${isActive ? 'bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-400' : 'hover:bg-slate-50 dark:hover:bg-slate-800/80'}" onclick="toggleDashFilter('category', '${escapeHtml(cat)}')">
+                                                    <div class="flex justify-between items-center text-xs font-semibold mb-2 ${isActive ? 'text-emerald-700 dark:text-emerald-400' : 'text-slate-600 dark:text-slate-300'}">
+                                                        <span class="truncate pr-2">${escapeHtml(cat)}</span>
+                                                        <span>${count} · ${pct}%</span>
+                                                    </div>
+                                                    <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5">
+                                                        <div class="bg-emerald-500 h-1.5 rounded-full transition-all duration-500" style="width: ${pct}%;"></div>
+                                                    </div>
+                                                </div>`;
+                                        }).join('')}
+                                    </div>
+                                ` : `<p class="text-sm text-slate-400 italic">No categories in this selection.</p>`}
+                            </div>
+
+                            <!-- Impact Mix Summary -->
+                            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <div class="flex items-center justify-between mb-5">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="pie-chart" class="h-4 w-4 text-purple-500"></i>
+                                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Scope Distribution</h3>
+                                    </div>
+                                </div>
+                                ${totalForPercent > 0 ? `
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1">
+                                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-500"></span>Company/External</span>
+                                            <span>${highScope} · ${highScopePct}%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5">
+                                            <div class="h-1.5 rounded-full bg-purple-500 transition-all duration-500" style="width: ${highScopePct}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1">
+                                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span>Department/Team</span>
+                                            <span>${midScope} · ${midScopePct}%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5">
+                                            <div class="h-1.5 rounded-full bg-blue-500 transition-all duration-500" style="width: ${midScopePct}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1">
+                                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-slate-500"></span>Individual</span>
+                                            <span>${individualScope} · ${individualScopePct}%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5">
+                                            <div class="h-1.5 rounded-full bg-slate-500 transition-all duration-500" style="width: ${individualScopePct}%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                ` : `<p class="text-sm text-slate-400 italic">No impact data available.</p>`}
+                            </div>
+
+                            <!-- Activity Insights -->
+                            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <div class="flex items-center gap-2 mb-5">
+                                    <i data-lucide="activity" class="h-4 w-4 text-indigo-500"></i>
+                                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Activity Insights</h3>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Last 30 days</span>
+                                        <span class="text-lg font-bold text-emerald-600 dark:text-emerald-400">${recent30Count}</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Last 90 days</span>
+                                        <span class="text-lg font-bold text-blue-600 dark:text-blue-400">${recent90Count}</span>
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-slate-100 dark:border-slate-700">
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Weekly avg (90d)</span>
+                                        <span class="text-lg font-bold text-slate-700 dark:text-slate-300">
+                                            ${recent90Count > 0 ? Math.round(recent90Count / 13 * 10) / 10 : 0}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skills & Stakeholders -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <div class="flex items-center justify-between mb-5">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="cpu" class="h-4 w-4 text-blue-500"></i>
+                                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Top Skills</h3>
+                                    </div>
+                                    <span class="text-slate-400 text-xs">Click tags to filter</span>
+                                </div>
+                                ${topSkills.length > 0 ? `
+                                    <div class="flex flex-wrap gap-2">
+                                        ${topSkills.map(([skill, count]) => {
+                                            const isActive = dashFilters.skill === skill;
+                                            return `
+                                            <button class="dash-interactive inline-flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-xs font-semibold ${isActive ? 'bg-blue-600 text-white shadow-lg ring-2 ring-blue-300' : 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border border-blue-100 dark:border-blue-800/50 hover:bg-blue-100'}" onclick="toggleDashFilter('skill', '${escapeHtml(skill)}')">
+                                                ${escapeHtml(skill)} <span class="${isActive ? 'bg-blue-800 text-white' : 'bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300'} px-1.5 py-0.5 rounded text-[10px] font-bold">${count}</span>
+                                            </button>`;
+                                        }).join('')}
+                                    </div>
+                                ` : `<p class="text-sm text-slate-400 italic">No skills match the current filter.</p>`}
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 md:p-6 shadow-sm">
+                                <div class="flex items-center justify-between mb-5">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="users" class="h-4 w-4 text-orange-500"></i>
+                                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Key Stakeholders</h3>
+                                    </div>
+                                    <span class="text-slate-400 text-xs">Click names to filter</span>
+                                </div>
+                                ${topStakeholders.length > 0 ? `
+                                    <div class="flex flex-wrap gap-2">
+                                        ${topStakeholders.map(([person, count]) => {
+                                            const isActive = dashFilters.stakeholder === person;
+                                            return `
+                                            <button class="dash-interactive inline-flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-xs font-semibold ${isActive ? 'bg-orange-500 text-white shadow-lg ring-2 ring-orange-300' : 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400 border border-orange-100 dark:border-orange-800/50 hover:bg-orange-100'}" onclick="toggleDashFilter('stakeholder', '${escapeHtml(person)}')">
+                                                ${escapeHtml(person)} <span class="${isActive ? 'bg-orange-700 text-white' : 'bg-orange-100 dark:bg-orange-800/50 text-orange-600 dark:text-orange-300'} px-1.5 py-0.5 rounded text-[10px] font-bold">${count}</span>
+                                            </button>`;
+                                        }).join('')}
+                                    </div>
+                                ` : `<p class="text-sm text-slate-400 italic">No stakeholders match the current filter.</p>`}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div id="dashboard-results" class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 md:p-6 shadow-sm">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                                    ${hasActiveFilter ? 'Filtered Results' : 'Recent Achievements'}
+                                </h3>
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Showing ${displayEntries.length} achievement${displayEntries.length !== 1 ? 's' : ''} sorted by date
+                                </p>
+                            </div>
+                            ${!hasActiveFilter && displayEntries[0] ? `
+                                <button onclick="switchTab('${escapeHtml(getWeekString(displayEntries[0].exactDate))}')" 
+                                        class="text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors">
+                                    View Timeline →
+                                </button>
+                            ` : ''}
+                        </div>
+                        
+                        ${displayEntries.length === 0 ? `
+                            <div class="text-center py-16 border border-slate-200 dark:border-slate-700 border-dashed rounded-xl">
+                                <i data-lucide="filter-x" class="h-12 w-12 text-slate-300 mx-auto mb-4"></i>
+                                <p class="text-lg font-semibold text-slate-500 mb-2">No achievements match this filter</p>
+                                <button onclick="clearDashFilter()" class="text-sm font-bold text-primary-600 hover:underline">Clear Filters</button>
+                            </div>
+                        ` : `
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                ${displayEntries.slice(0, hasActiveFilter ? 50 : 9).map(entry => `
+                                    <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 cursor-pointer hover:border-primary-400 dark:hover:border-primary-600 transition-all hover:shadow-lg group flex flex-col" onclick="openModal('${entry.id}')">
+                                        <div class="flex justify-between items-start mb-3">
+                                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-[10px] uppercase tracking-wider">
+                                                ${entry.impact}
+                                            </span>
+                                            <span class="text-slate-400 font-semibold text-xs flex items-center gap-1">
+                                                <i data-lucide="calendar" class="h-3 w-3"></i> 
+                                                ${parseEntryDate(entry).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                                            </span>
+                                        </div>
+                                        <h4 class="font-bold text-slate-900 dark:text-white text-base leading-tight mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                                            ${escapeHtml(entry.project)}
+                                        </h4>
+                                        <div class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                                            ${escapeHtml((entry.goals || entry.contribution || '').replace(/[*#]/g, '').substring(0, 150))}${(entry.goals || entry.contribution || '').length > 150 ? '...' : ''}
+                                        </div>
+                                        ${entry.category ? `<div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-700/50 text-xs font-semibold text-primary-500">${escapeHtml(entry.category)}</div>` : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `}
+                    </div>
+                </div>
+            `;
+        }
+
+        function switchTab(key) { 
+            activeWeekKey = key; 
+            dashFilters = { impact: null, month: null, skill: null, stakeholder: null, category: null, timeRange: null };
+            renderView(document.getElementById('search-input').value); 
+        }
+
+        function renderCard(entry) {
+            const displayDate = parseEntryDate(entry).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+            const impactColors = {
+                'Company': 'bg-purple-100 text-purple-700 border-purple-200 dark:bg-purple-900/30 dark:text-purple-400 dark:border-purple-800',
+                'External': 'bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800',
+                'Department': 'bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800',
+                'Team': 'bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800',
+                'Individual': 'bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-600'
+            };
+            const impactBadge = impactColors[entry.impact] || impactColors['Team'];
+
+            const renderBlock = (icon, color, title, content, bgClass = '') => {
+                if (!content) return '';
+                return `
+                    <div class="mt-4 ${bgClass} p-4 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="${icon}" class="h-4 w-4 text-${color}-500"></i>
+                            <span class="font-bold text-[10px] text-slate-500 uppercase tracking-wider">${title}</span>
+                        </div>
+                        <div class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${parseMarkdown(content)}</div>
+                    </div>
+                `;
+            };
+
+            return `
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative fade-in">
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1 z-10 bg-white/90 dark:bg-slate-800/90 backdrop-blur rounded-lg shadow-sm border border-slate-100 dark:border-slate-700 p-1">
+                        <button onclick="openModal('${entry.id}')" class="p-1.5 text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" title="Edit Achievement">
+                            <i data-lucide="edit-2" class="h-4 w-4"></i>
+                        </button>
+                        <button onclick="deleteEntry('${entry.id}')" class="p-1.5 text-slate-400 hover:text-red-600 dark:hover:text-red-400 rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" title="Delete Achievement">
+                            <i data-lucide="trash-2" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-5 md:p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                                <i data-lucide="calendar" class="h-3.5 w-3.5"></i> ${displayDate}
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider border ${impactBadge}">
+                                ${escapeHtml(entry.impact || 'Team')}
+                            </span>
+                        </div>
+                        
+                        <h3 class="font-extrabold text-lg md:text-xl text-slate-900 dark:text-white leading-tight mb-2 pr-12">
+                            ${escapeHtml(entry.project)}
+                        </h3>
+                        
+                        ${entry.category ? `<span class="inline-block text-xs font-semibold text-primary-600 dark:text-primary-400 mb-4">${escapeHtml(entry.category)}</span>` : ''}
+
+                        <div class="flex-1 space-y-0">
+                            ${renderBlock('info', 'blue', 'Context & Problem', entry.problem, 'bg-slate-50 dark:bg-slate-900/50')}
+                            ${renderBlock('compass', 'indigo', 'Strategic Alignment', entry.alignment, 'bg-indigo-50 dark:bg-indigo-900/10')}
+                            ${renderBlock('target', 'purple', 'Your Actions', entry.contribution)}
+                            ${renderBlock('alert-triangle', 'orange', 'Challenges Overcome', entry.challenges)}
+                            ${renderBlock('git-branch', 'red', 'Tradeoffs & Risks', entry.tradeoffs)}
+                            
+                            ${entry.goals ? `
+                            <div class="mt-5 bg-gradient-to-br from-emerald-50 to-emerald-100/50 dark:from-emerald-950/30 dark:to-emerald-900/10 border border-emerald-200 dark:border-emerald-800/50 rounded-xl p-4 md:p-5">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <i data-lucide="trending-up" class="h-5 w-5 text-emerald-600 dark:text-emerald-400"></i>
+                                    <span class="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">Quantified Results</span>
+                                </div>
+                                <div class="text-sm text-emerald-900 dark:text-emerald-100 leading-relaxed">${parseMarkdown(entry.goals)}</div>
+                                
+                                ${entry.soundbites ? `
+                                <div class="mt-4 pt-4 border-t border-emerald-200/50 dark:border-emerald-800/50">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <i data-lucide="hash" class="h-4 w-4 text-emerald-600 dark:text-emerald-400"></i>
+                                        <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Resume Soundbites</span>
+                                    </div>
+                                    <div class="text-sm text-emerald-800 dark:text-emerald-200">${parseMarkdown(entry.soundbites)}</div>
+                                </div>` : ''}
+                                
+                                ${entry.evidence ? `
+                                <div class="mt-4 pt-4 border-t border-emerald-200/50 dark:border-emerald-800/50">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <i data-lucide="award" class="h-4 w-4 text-emerald-600 dark:text-emerald-400"></i>
+                                        <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Recognition & Lessons</span>
+                                    </div>
+                                    <div class="text-sm text-emerald-800 dark:text-emerald-200 italic">${parseMarkdown(entry.evidence)}</div>
+                                </div>` : ''}
+                            </div>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEmptyState() {
+            return `
+                <div class="w-full flex flex-col items-center justify-center py-16 md:py-24 text-center fade-in px-4">
+                    <div class="bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/30 dark:to-primary-800/20 rounded-full p-8 md:p-12 mb-8 shadow-xl">
+                        <i data-lucide="rocket" class="h-12 w-12 md:h-16 md:w-16 text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Launch Your Career Timeline</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg leading-relaxed text-base md:text-lg">
+                        Start documenting your professional achievements with strategic context and comprehensive analytics.
+                    </p>
+                    <button onclick="openModal()" class="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl text-sm md:text-base font-bold flex items-center gap-3 transition-all shadow-xl shadow-primary-600/25 hover:-translate-y-1">
+                        <i data-lucide="plus" class="h-5 w-5 md:h-6 md:w-6"></i> Log Your First Achievement
+                    </button>
+                </div>
+            `;
+        }
+
+        function fillSampleContent() {
+            const scope = document.getElementById('impact').value || 'Team';
+            const category = document.getElementById('category').value || 'Feature Development';
+            document.getElementById('exact-date').valueAsDate = new Date();
+            
+            const templates = getSampleTemplates(scope, category);
+            Object.keys(templates).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) element.value = templates[key];
+            });
+        }
+
+        function getSampleTemplates(scope, category) {
+            const templateSets = {
+                'Feature Development': {
+                    project: `Shipped ${scope === 'Individual' ? 'Advanced Search Feature' : scope + '-Level Analytics Dashboard'} - 45% Performance Boost`,
+                    problem: `### Business Context\n**Problem:** ${scope === 'Individual' ? 'Users struggled to find relevant data quickly' : `Existing analytics tools were slow, causing frustration across the ${scope}`}.\n**Risk:** ${scope === 'Company' ? 'Platform-wide performance issues affecting user retention' : 'High user churn and negative feedback on core functionality'}.`,
+                    alignment: `**${scope === 'Individual' ? 'Team' : scope} Goal:** Improve platform performance by 35% in Q3.\n**Strategic Impact:** Enhanced user experience and reduced support burden.`,
+                    contribution: `• **Led** frontend ${scope === 'Individual' ? 'feature development' : 'architecture redesign'} using React and GraphQL\n• **Designed** intelligent caching layer to reduce redundant API calls by 60%\n• **Coordinated** with backend team to optimize database queries and indexing\n• **Implemented** comprehensive performance monitoring and alerting`,
+                    stakeholders: `${scope === 'Company' ? 'Engineering, Product, Design, QA, DevOps, Data' : scope === 'Department' ? 'Engineering Team, Product Management, Design' : 'Frontend Team, Backend Team, QA'}`,
+                    skills: `React, GraphQL, Performance Optimization, JavaScript, ${scope === 'Company' ? 'System Architecture, Redis' : 'Web Development, Caching'}`,
+                    challenges: `• **Technical:** Complex legacy codebase with tight coupling → Migrated incrementally over 5 sprints using feature flags\n• **Resource:** Limited QA bandwidth during sprint → Wrote comprehensive automated test suite covering 95% of use cases\n• **Timeline:** Tight deadline before ${scope === 'Company' ? 'major product launch' : 'quarterly release'} → Prioritized core performance improvements first`,
+                    tradeoffs: `• **Scope vs Timeline:** Deferred ${scope === 'Company' ? 'advanced analytics features and real-time notifications' : 'PDF export and advanced filtering'} to hit Q3 release deadline\n• **Quality vs Speed:** Focused on core performance improvements first, planned comprehensive refactor for Q4`,
+                    goals: `• Reduced average ${scope === 'Company' ? 'platform' : 'dashboard'} load time by **45%** (from 8s to 4.4s)\n• Increased ${scope} user satisfaction score by **18 points** (from 7.2 to 8.9)\n• Eliminated ${scope === 'Company' ? '300+' : '75+'} weekly support tickets regarding timeouts and slow performance\n• Improved ${scope === 'Company' ? 'overall platform reliability and reduced bounce rate by 22%' : 'feature adoption by 35%'}`,
+                    soundbites: `• Delivered new ${scope.toLowerCase()} ${scope === 'Individual' ? 'search feature' : 'analytics dashboard'}, reducing load times by **45%** and eliminating ${scope === 'Company' ? '300+' : '75+'} weekly support tickets\n• Led performance optimization initiative that improved user satisfaction by **18 points** across the ${scope.toLowerCase()}`,
+                    evidence: `**Recognition:**\n> *"${scope === 'Individual' ? 'Exceptional attention to user experience and technical excellence' : 'Complete game changer for our daily workflow and productivity'}" - ${scope === 'Company' ? 'VP of Engineering' : 'Product Manager'}*\n\n**Lessons:** Incremental rollouts with feature flags reduce deployment risk by 80% and allow for real-time optimization based on user feedback.`
+                }
+            };
+
+            return templateSets[category] || templateSets['Feature Development'];
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = message;
+            
+            if (type === 'error') {
+                toast.firstElementChild.className = 'bg-red-600 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-red-700';
+            } else {
+                toast.firstElementChild.className = 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 text-sm font-bold border border-slate-700 dark:border-slate-200';
+            }
+            
+            toast.classList.remove('translate-y-full', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-y-full', 'opacity-0'), 4000);
+        }
+
+        function generateId() { 
+            return Date.now().toString(36) + Math.random().toString(36).substr(2); 
+        }
+        
+        function escapeHtml(text) { 
+            if (!text) return ''; 
+            const div = document.createElement('div'); 
+            div.textContent = text; 
+            return div.innerHTML; 
+        }
+
+        function exportData() {
+            if (!entries.length) return showToast('No achievements to export', 'error');
+            try {
+                const blob = new Blob([JSON.stringify(entries, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a'); 
+                link.href = url; 
+                link.download = `impact-journal-${new Date().toISOString().split('T')[0]}.json`;
+                document.body.appendChild(link); 
+                link                .click(); 
+                document.body.removeChild(link); 
+                URL.revokeObjectURL(url);
+                showToast(`Exported ${entries.length} achievements!`);
+            } catch (e) { 
+                console.error('Export error:', e);
+                showToast('Export failed', 'error'); 
+            }
+        }
+
+        function handleImport(e) {
+            const file = e.target.files[0]; 
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                try {
+                    const imported = JSON.parse(event.target.result);
+                    if (!Array.isArray(imported)) throw new Error('Invalid format');
+                    
+                    const shouldMerge = confirm(`Import ${imported.length} achievements?\n\nOK = Merge with existing\nCancel = Replace all`);
+                    
+                    if (shouldMerge) {
+                        const uniqueMap = new Map(
+                            [...imported, ...entries].map(item => [item.id || generateId(), item])
+                        );
+                        entries = Array.from(uniqueMap.values());
+                    } else {
+                        entries = imported;
+                    }
+                    
+                    // Normalize imported entries to ensure compatibility
+                    entries = entries.map(entry => {
+                        const date = entry.exactDate || (entry.createdAt ? entry.createdAt.split('T')[0] : new Date().toISOString().split('T')[0]);
+                        return {
+                            id: entry.id || generateId(),
+                            exactDate: date,
+                            weekGroup: getWeekString(date),
+                            impact: entry.impact || 'Team',
+                            category: entry.category || 'Feature Development',
+                            project: entry.project || 'Imported Achievement',
+                            problem: entry.problem || '',
+                            alignment: entry.alignment || '',
+                            contribution: entry.contribution || '',
+                            stakeholders: entry.stakeholders || '',
+                            skills: entry.skills || '',
+                            challenges: entry.challenges || '',
+                            tradeoffs: entry.tradeoffs || '',
+                            goals: entry.goals || '',
+                            soundbites: entry.soundbites || '',
+                            evidence: entry.evidence || '',
+                            createdAt: entry.createdAt || new Date().toISOString(),
+                            updatedAt: new Date().toISOString()
+                        };
+                    });
+                    
+                    saveEntries(); 
+                    activeWeekKey = 'dashboard'; 
+                    dashFilters = { impact: null, month: null, skill: null, stakeholder: null, category: null, timeRange: null };
+                    renderView(); 
+                    showToast(`Imported ${imported.length} achievements!`);
+                } catch (err) { 
+                    console.error('Import error:', err);
+                    showToast('Import failed: Invalid JSON', 'error'); 
+                }
+            };
+            reader.readAsText(file); 
+            e.target.value = '';
+        }
+
+        // Global function exports for onclick handlers
+        window.openModal = openModal; 
+        window.closeModal = closeModal; 
+        window.deleteEntry = deleteEntry;
+        window.switchTab = switchTab; 
+        window.fillSampleContent = fillSampleContent; 
+        window.formatFullscreenText = formatFullscreenText;
+        window.openFullscreenEditor = openFullscreenEditor; 
+        window.closeFullscreenEditor = closeFullscreenEditor; 
+        window.insertTemplate = insertTemplate; 
+        window.toggleDashFilter = toggleDashFilter;
+        window.clearDashFilter = clearDashFilter;
+        window.exportPerformanceReview = exportPerformanceReview;
+    </script>
+</body>
+</html>
